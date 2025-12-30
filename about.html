@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Learn about Nyena Logistics - Africa's leading integrated logistics platform. Our mission, vision, team, and commitment to transforming supply chains across the continent.">
+    <meta name="keywords" content="about Nyena Logistics, logistics company Africa, supply chain solutions, company history, leadership team, logistics mission">
+    <title>About Us | Nyena Logistics - Africa's Premier Integrated Logistics Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ================= ROOT VARIABLES (Your Logo Colors) ================= */
+        :root {
+            --navy: #0B2C3D;
+            --teal: #0E7490;
+            --gold: #D4AF37;
+            --off-white: #F8FAFC;
+            --slate: #0F172A;
+            
+            /* Creative blends */
+            --teal-light: #0EA5E9;
+            --teal-dark: #075985;
+            --gold-light: #FBBF24;
+            --gold-dark: #B45309;
+            --navy-light: #164E63;
+            --navy-gradient: linear-gradient(135deg, #0B2C3D 0%, #164E63 100%);
+            --teal-gradient: linear-gradient(135deg, #0E7490 0%, #0EA5E9 100%);
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #FBBF24 100%);
+            
+            /* Accent yellowish color */
+            --accent-yellow: #FFD700;
+            --accent-yellow-light: #FFF380;
+            --accent-yellow-gradient: linear-gradient(135deg, #FFD700 0%, #FFE55C 100%);
+            
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --shadow: 0 20px 40px rgba(11, 44, 61, 0.08);
+            --shadow-hover: 0 30px 60px rgba(11, 44, 61, 0.15);
+            --shadow-gold: 0 15px 35px rgba(212, 175, 55, 0.15);
+            --shadow-yellow: 0 15px 35px rgba(255, 215, 0, 0.25);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ================= RESET & BASE ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--off-white);
+            color: var(--slate);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ================= ANIMATIONS ================= */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        @keyframes pulseYellow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+
+        /* ================= UTILITY CLASSES ================= */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .text-center { text-align: center; }
+        .text-teal { color: var(--teal); }
+        .text-gold { color: var(--gold); }
+        .text-navy { color: var(--navy); }
+        .text-white { color: white; }
+        .text-accent-yellow { color: var(--accent-yellow); }
+        .bg-gradient-navy { background: var(--navy-gradient); }
+        .bg-gradient-teal { background: var(--teal-gradient); }
+        .bg-gradient-gold { background: var(--gold-gradient); }
+        .bg-off-white { background: var(--off-white); }
+        .bg-accent-yellow { background: var(--accent-yellow); }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= BUTTONS ================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.25rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--teal-gradient);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: var(--navy);
+            font-weight: 800;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-yellow {
+            background: var(--accent-yellow-gradient);
+            color: var(--navy);
+            font-weight: 800;
+            box-shadow: var(--shadow-yellow);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: var(--navy-light);
+            transform: translateY(-5px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--teal);
+            border-color: var(--teal);
+        }
+
+        .btn-outline:hover {
+            background: var(--teal);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .btn-lg {
+            padding: 1.25rem 3rem;
+            font-size: 1.15rem;
+        }
+
+        /* ================= NAVBAR ================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 10px 30px rgba(11, 44, 61, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .nav {
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--teal);
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--navy);
+            padding: 0.5rem 0;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--teal);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            color: var(--navy);
+            z-index: 1001;
+        }
+
+        /* ================= ABOUT HERO ================= */
+        .about-hero {
+            padding: 12rem 0 8rem;
+            background: var(--navy-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.05"><path d="M0 0h1200v600H0z" fill="none"/><path d="M0 300l1200-300v600L0 300z" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .about-hero h1 span {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+
+        /* ================= STORY SECTION ================= */
+        .story-section {
+            background: var(--off-white);
+            position: relative;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, white, transparent);
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .story-image-container {
+            position: relative;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 500px;
+            background: var(--navy-gradient);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .story-image-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(11, 44, 61, 0.9), transparent);
+            color: white;
+            z-index: 2;
+        }
+
+        .story-badge {
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            background: var(--accent-yellow-gradient);
+            color: var(--navy);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-yellow);
+            animation: pulseYellow 2s infinite;
+            z-index: 10;
+            min-width: 180px;
+            text-align: center;
+            border: 2px solid var(--accent-yellow);
+        }
+
+        .story-badge h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .story-badge p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .story-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-text h2 span {
+            color: var(--teal);
+        }
+
+        /* ================= VALUES SECTION ================= */
+        .values-section {
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--slate);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(14, 116, 144, 0.1);
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--teal-gradient);
+            transition: height 0.4s ease;
+            z-index: 1;
+        }
+
+        .value-card:hover::before {
+            height: 100%;
+            opacity: 0.05;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .value-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .value-card p {
+            color: var(--slate);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        /* ================= TEAM SECTION ================= */
+        .team-section {
+            background: rgba(14, 116, 144, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            background: var(--teal-gradient);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            color: var(--slate);
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* ================= MILESTONES ================= */
+        .milestones-section {
+            background: white;
+        }
+
+        .milestones-timeline {
+            max-width: 800px;
+            margin: 4rem auto 0;
+            position: relative;
+        }
+
+        .milestones-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: var(--teal-gradient);
+            transform: translateX(-50%);
+        }
+
+        .milestone {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .milestone:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .milestone-content {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            width: 45%;
+            position: relative;
+        }
+
+        .milestone-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--teal);
+        }
+
+        .milestone-year {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--gold-gradient);
+            color: var(--navy);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 800;
+            font-size: 1.2rem;
+            z-index: 2;
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: var(--slate);
+            color: #94A3B8;
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-yellow-gradient);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .footer-logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer-logo-sub {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-yellow);
+            letter-spacing: 1.5px;
+            margin-top: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-yellow);
+            color: var(--navy);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h5 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-yellow);
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-yellow);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: var(--accent-yellow);
+        }
+
+        .newsletter {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin-top: 1.5rem;
+        }
+
+        .newsletter h6 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 2.0rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 1100px) {
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .story-image-container {
+                order: -1;
+            }
+            
+            .milestones-timeline::before {
+                left: 30px;
+            }
+            
+            .milestone {
+                flex-direction: row !important;
+            }
+            
+            .milestone-content {
+                width: calc(100% - 100px);
+                margin-left: 80px;
+            }
+            
+            .milestone-year {
+                left: 30px;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .about-hero {
+                padding: 10rem 0 6rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                box-shadow: -10px 0 40px rgba(11, 44, 61, 0.1);
+                transition: right 0.5s ease;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+                padding: 1rem 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .story-text h2 {
+                font-size: 2.3rem;
+            }
+            
+            .values-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-badge {
+                top: -20px;
+                right: -20px;
+                padding: 1.25rem;
+                min-width: 160px;
+            }
+            
+            .story-badge h4 {
+                font-size: 1.3rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .about-hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .about-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .story-text h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .story-badge {
+                top: -15px;
+                right: -15px;
+                padding: 1rem;
+                min-width: 140px;
+            }
+            
+            .story-badge h4 {
+                font-size: 1.1rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            .story-badge p {
+                font-size: 0.8rem;
+            }
+            
+            .story-image {
+                height: 400px;
+            }
+            
+            .milestone-content {
+                margin-left: 70px;
+                width: calc(100% - 80px);
+                padding: 1.5rem;
+            }
+            
+            .milestone-year {
+                padding: 0.75rem 1.25rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav class="nav" aria-label="Main Navigation">
+                <a href="main.html" class="logo">
+                    <img src="nyenalogo.png" alt="Nyena Logistics Logo" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-main">NYENA</div>
+                        <div class="logo-sub">LOGISTICS</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="main.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="main.html#services" class="nav-link">Services</a>
+                    <a href="main.html#industries" class="nav-link">Industries</a>
+                    <a href="main.html#contact" class="nav-link">Contact</a>
+                    <a href="/track" class="nav-link">Track Shipment</a>
+                    <a href="/partners" class="nav-link">Partners</a>
+                    <a href="/dashboard" class="btn btn-dark">Dashboard</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- ABOUT HERO -->
+        <section class="about-hero" aria-labelledby="about-hero-title">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1 id="about-hero-title">
+                        About <span>Nyena Logistics</span>
+                    </h1>
+                    <p>
+                        Discover the story behind Africa's premier integrated logistics platform. Learn about our mission, values, and the team dedicated to transforming supply chains across the continent.
+                    </p>
+                    <a href="#story" class="btn btn-yellow btn-lg">
+                        <i class="fas fa-book-open"></i> Our Story
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR STORY -->
+        <section id="story" class="story-section section">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-image-container">
+                        <div class="story-image">
+                            <div class="story-image-content">
+                                <h3 style="color: white; margin-bottom: 0.5rem;">Nyena Operations Hub</h3>
+                                <p>Accra, Ghana Headquarters</p>
+                            </div>
+                        </div>
+                        <div class="story-badge">
+                            <h4>Since 2020</h4>
+                            <p>5+ Years of Excellence</p>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h2>Our <span>Journey</span> Begins</h2>
+                        <p>Founded in 2020 during a period of rapid digital transformation across Africa, Nyena Logistics was born from a simple yet powerful vision: to create a unified platform that solves the continent's complex logistics challenges.</p>
+                        <p>Our founders, experienced professionals in logistics, technology, and African markets, recognized the fragmentation in Africa's supply chain ecosystem. They saw an opportunity to leverage technology to connect businesses with reliable movement and infrastructure solutions.</p>
+                        <p>Starting with just three team members and a single warehouse in Accra, Ghana, we've grown to become a pan-African platform operating in 12 countries with over 500 verified partners and 15,000+ successful deliveries.</p>
+                        
+                        <div style="margin-top: 2rem;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Our Mission</h3>
+                            <p>To simplify logistics across Africa by leveraging technology, local expertise, and strategic partnerships to overcome infrastructure challenges and drive economic growth.</p>
+                        </div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Our Vision</h3>
+                            <p>To become Africa's most trusted logistics infrastructure platform by 2030, connecting every business to efficient, reliable, and affordable movement solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR VALUES -->
+        <section class="values-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Core <span class="text-teal">Values</span></h2>
+                    <p>The principles that guide every decision and action at Nyena Logistics</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p>We operate with transparency, honesty, and ethical practices in all our dealings. Our word is our bond, and we build trust through consistent, reliable actions.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We continuously seek smarter solutions to complex logistics challenges, leveraging technology to improve efficiency and create value for our clients.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Reliability</h3>
+                        <p>We deliver on our promises, ensuring that every shipment reaches its destination safely and on time, every time.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Customer-Centric</h3>
+                        <p>Our clients are at the heart of everything we do. We listen, adapt, and evolve to meet their unique needs and exceed their expectations.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <h3>Local Expertise</h3>
+                        <p>We combine global best practices with deep understanding of local markets, regulations, and cultural nuances across Africa.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Sustainability</h3>
+                        <p>We're committed to sustainable logistics practices that minimize environmental impact while maximizing economic value for communities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP TEAM -->
+        <section class="team-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet Our <span class="text-teal">Leadership</span></h2>
+                    <p>The visionary leaders driving Nyena Logistics forward</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Issah Yakubu</h3>
+                            <div class="member-role">CEO & Founder</div>
+                            <p class="member-bio">Former logistics executive with 15+ years experience across West Africa. Founded Nyena Logistics to solve fragmentation in African supply chains.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Ama Serwaa</h3>
+                            <div class="member-role">Chief Operations Officer</div>
+                            <p class="member-bio">Operations specialist with expertise in optimizing complex supply chains across multiple African markets.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Kofi Mensah</h3>
+                            <div class="member-role">Chief Technology Officer</div>
+                            <p class="member-bio">Tech visionary with background in building scalable platforms for emerging markets. Leads our digital transformation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Esi Ampofo</h3>
+                            <div class="member-role">Chief Financial Officer</div>
+                            <p class="member-bio">Finance professional with extensive experience in African markets and cross-border transactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MILESTONES -->
+        <section class="milestones-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our <span class="text-teal">Milestones</span></h2>
+                    <p>Key moments in Nyena Logistics' journey of growth and impact</p>
+                </div>
+                
+                <div class="milestones-timeline">
+                    <div class="milestone">
+                        <div class="milestone-content">
+                            <h3>Company Founded</h3>
+                            <p>Nyena Logistics officially launches in Accra, Ghana with a focus on regional logistics solutions.</p>
+                        </div>
+                        <div class="milestone-year">2020</div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-content">
+                            <h3>Platform Launch</h3>
+                            <p>Our integrated digital platform goes live, connecting clients with logistics partners across Ghana.</p>
+                        </div>
+                        <div class="milestone-year">2021</div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-content">
+                            <h3>West African Expansion</h3>
+                            <p>We expand operations to Nigeria, Côte d'Ivoire, and Senegal, establishing regional hubs.</p>
+                        </div>
+                        <div class="milestone-year">2022</div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-content">
+                            <h3>Integrated Services</h3>
+                            <p>Launch of real estate, shipping, and transport divisions to offer comprehensive solutions.</p>
+                        </div>
+                        <div class="milestone-year">2023</div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-content">
+                            <h3>Pan-African Reach</h3>
+                            <p>Operations expand to 12 African countries with 500+ verified partners in our network.</p>
+                        </div>
+                        <div class="milestone-year">2024</div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-content">
+                            <h3>15,000+ Deliveries</h3>
+                            <p>We celebrate a major milestone of 15,000+ successful deliveries across Africa.</p>
+                        </div>
+                        <div class="milestone-year">2025</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta section" style="background: var(--navy-gradient);">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <h2 style="color: white;">Join Our Journey</h2>
+                    <p style="color: white; opacity: 0.9;">Be part of Africa's logistics transformation</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="/careers" class="btn btn-yellow btn-lg" style="margin-right: 1rem;">
+                        <i class="fas fa-briefcase"></i> Careers at Nyena
+                    </a>
+                    <a href="/partners" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-handshake"></i> Partner With Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Nyena Logistics Logo" class="footer-logo-img">
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-main">NYENA</div>
+                            <div class="footer-logo-sub">LOGISTICS</div>
+                        </div>
+                    </div>
+                    <p>Africa's premier integrated logistics platform, connecting businesses with smarter movement and infrastructure solutions across the continent.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>About Nyena</h5>
+                    <ul>
+                        <li><a href="/about"><i class="fas fa-chevron-right"></i> Our Story</a></li>
+                        <li><a href="/leadership"><i class="fas fa-chevron-right"></i> Leadership Team</a></li>
+                        <li><a href="/careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                        <li><a href="/news"><i class="fas fa-chevron-right"></i> News & Media</a></li>
+                        <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="/logistics"><i class="fas fa-chevron-right"></i> General Logistics</a></li>
+                        <li><a href="/real-estate"><i class="fas fa-chevron-right"></i> Real Estate & Apartments</a></li>
+                        <li><a href="/shipping"><i class="fas fa-chevron-right"></i> Shipping & Freight</a></li>
+                        <li><a href="/transport"><i class="fas fa-chevron-right"></i> Transport & Fleet</a></li>
+                        <li><a href="/track"><i class="fas fa-chevron-right"></i> Track Shipment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="/blog"><i class="fas fa-chevron-right"></i> Blog & Insights</a></li>
+                        <li><a href="/help"><i class="fas fa-chevron-right"></i> Help Center</a></li>
+                        <li><a href="/api"><i class="fas fa-chevron-right"></i> Developer API</a></li>
+                        <li><a href="/partners"><i class="fas fa-chevron-right"></i> Partner Program</a></li>
+                        <li><a href="/support"><i class="fas fa-chevron-right"></i> Customer Support</a></li>
+                    </ul>
+                    
+                    <div class="newsletter">
+                        <h6>Subscribe to Our Newsletter</h6>
+                        <p>Get the latest logistics insights and updates</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-yellow" style="padding: 0.75rem 1.5rem;"><i class="fa-solid fa-bell"></i> </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Nyena Logistics Ltd. All Rights Reserved. | <a href="/privacy" style="color: var(--accent-yellow);">Privacy Policy</a> | <a href="/terms" style="color: var(--accent-yellow);">Terms of Service</a> | <a href="/cookies" style="color: var(--accent-yellow);">Cookie Policy</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;"><i>Headquarters: Greater Accra, Ghana | Regional Offices: Kumasi, Takoradi</i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            navLinks.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking outside or on a link
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+
+        // Initialize scroll animation
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Add animation classes to elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation class to hero elements
+            const heroElements = document.querySelectorAll('.about-hero h1, .about-hero p, .about-hero .btn');
+            heroElements.forEach((el, index) => {
+                el.style.animation = `fadeInUp 0.8s ease ${index * 0.2}s both`;
+            });
+            
+            // Add animation to value cards
+            const valueCards = document.querySelectorAll('.value-card');
+            valueCards.forEach((card, index) => {
+                card.classList.add('animate-on-scroll');
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation to team members
+            const teamMembers = document.querySelectorAll('.team-member');
+            teamMembers.forEach((member, index) => {
+                member.classList.add('animate-on-scroll');
+                member.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation to milestones
+            const milestones = document.querySelectorAll('.milestone');
+            milestones.forEach((milestone, index) => {
+                milestone.classList.add('animate-on-scroll');
+                milestone.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+
+        // Newsletter form submission (footer)
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('.newsletter-input');
+                const email = emailInput.value;
+                
+                // Show success message
+                emailInput.value = '';
+                const button = this.querySelector('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.background = 'var(--accent-yellow-gradient)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

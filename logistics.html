@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Nyena Logistics General Logistics Services - Comprehensive end-to-end logistics solutions across Africa including warehousing, distribution, inventory management and last-mile delivery.">
+    <meta name="keywords" content="logistics, supply chain, warehousing, distribution, inventory management, last-mile delivery, Africa logistics, cross-border shipping">
+    <title>General Logistics Services | Nyena Logistics - Africa's Premier Logistics Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ================= ROOT VARIABLES (Your Logo Colors) ================= */
+        :root {
+            --navy: #0B2C3D;
+            --teal: #0E7490;
+            --gold: #D4AF37;
+            --off-white: #F8FAFC;
+            --slate: #0F172A;
+            
+            /* Creative blends */
+            --teal-light: #0EA5E9;
+            --teal-dark: #075985;
+            --gold-light: #FBBF24;
+            --gold-dark: #B45309;
+            --navy-light: #164E63;
+            --navy-gradient: linear-gradient(135deg, #0B2C3D 0%, #164E63 100%);
+            --teal-gradient: linear-gradient(135deg, #0E7490 0%, #0EA5E9 100%);
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #FBBF24 100%);
+            
+            /* Accent yellowish color */
+            --accent-yellow: #FFD700;
+            --accent-yellow-light: #FFF380;
+            --accent-yellow-gradient: linear-gradient(135deg, #FFD700 0%, #FFE55C 100%);
+            
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --shadow: 0 20px 40px rgba(11, 44, 61, 0.08);
+            --shadow-hover: 0 30px 60px rgba(11, 44, 61, 0.15);
+            --shadow-gold: 0 15px 35px rgba(212, 175, 55, 0.15);
+            --shadow-yellow: 0 15px 35px rgba(255, 215, 0, 0.25);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ================= RESET & BASE ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--off-white);
+            color: var(--slate);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ================= ANIMATIONS ================= */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        @keyframes pulseYellow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+
+        @keyframes popupSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(100%) scale(0.9);
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(-10px) scale(1.02);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ================= UTILITY CLASSES ================= */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .text-center { text-align: center; }
+        .text-teal { color: var(--teal); }
+        .text-gold { color: var(--gold); }
+        .text-navy { color: var(--navy); }
+        .text-white { color: white; }
+        .text-accent-yellow { color: var(--accent-yellow); }
+        .bg-gradient-navy { background: var(--navy-gradient); }
+        .bg-gradient-teal { background: var(--teal-gradient); }
+        .bg-gradient-gold { background: var(--gold-gradient); }
+        .bg-off-white { background: var(--off-white); }
+        .bg-accent-yellow { background: var(--accent-yellow); }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= BUTTONS ================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.25rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--teal-gradient);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: var(--navy);
+            font-weight: 800;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-yellow {
+            background: var(--accent-yellow-gradient);
+            color: var(--navy);
+            font-weight: 800;
+            box-shadow: var(--shadow-yellow);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: var(--navy-light);
+            transform: translateY(-5px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--teal);
+            border-color: var(--teal);
+        }
+
+        .btn-outline:hover {
+            background: var(--teal);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .btn-lg {
+            padding: 1.25rem 3rem;
+            font-size: 1.15rem;
+        }
+
+        /* ================= NAVBAR ================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 10px 30px rgba(11, 44, 61, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .nav {
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--teal);
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--navy);
+            padding: 0.5rem 0;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--teal);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            color: var(--navy);
+            z-index: 1001;
+        }
+
+        /* ================= LOGISTICS HERO ================= */
+        .logistics-hero {
+            padding: 12rem 0 8rem;
+            background: var(--navy-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .logistics-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.05"><path d="M0 0h1200v600H0z" fill="none"/><path d="M0 300l1200-300v600L0 300z" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        .logistics-hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .logistics-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .logistics-hero h1 {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .logistics-hero h1 span {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .logistics-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+
+        .logistics-hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        /* ================= LOGISTICS OVERVIEW ================= */
+        .logistics-overview {
+            background: var(--off-white);
+            position: relative;
+        }
+
+        .logistics-overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .logistics-overview-text {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .logistics-overview h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .logistics-overview h2 span {
+            color: var(--teal);
+        }
+
+        .logistics-overview-features {
+            margin-top: 2rem;
+        }
+
+        .logistics-overview-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .logistics-feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            font-weight: 800;
+        }
+
+        .logistics-overview-image-container {
+            position: relative;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .logistics-overview-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(11, 44, 61, 0.9), rgba(14, 116, 144, 0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .logistics-overview-badge {
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+            background: var(--accent-yellow-gradient);
+            color: var(--navy);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-yellow);
+            animation: pulseYellow 2s infinite;
+            z-index: 10;
+            min-width: 180px;
+            text-align: center;
+            border: 2px solid var(--accent-yellow);
+        }
+
+        .logistics-overview-badge h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .logistics-overview-badge p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* ================= LOGISTICS SERVICES DETAIL ================= */
+        .logistics-services-detail {
+            background: white;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--slate);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .logistics-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .logistics-service-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(14, 116, 144, 0.1);
+        }
+
+        .logistics-service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .logistics-service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--teal-gradient);
+            transition: height 0.4s ease;
+            z-index: 1;
+        }
+
+        .logistics-service-card:hover::before {
+            height: 100%;
+            opacity: 0.05;
+        }
+
+        .logistics-service-icon {
+            font-size: 3rem;
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .logistics-service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .logistics-service-card p {
+            color: var(--slate);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .logistics-service-features {
+            margin: 1.5rem 0;
+        }
+
+        .logistics-service-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--slate);
+            transition: var(--transition);
+        }
+
+        .logistics-service-feature i {
+            color: var(--gold);
+        }
+
+        /* ================= LOGISTICS PROCESS ================= */
+        .logistics-process {
+            background: rgba(14, 116, 144, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logistics-process::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .logistics-process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .logistics-process-step {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .logistics-process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .logistics-step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--teal-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .logistics-step-number::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid rgba(14, 116, 144, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        /* ================= LOGISTICS SOLUTIONS ================= */
+        .logistics-solutions {
+            background: var(--off-white);
+        }
+
+        .logistics-solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .logistics-solution-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(14, 116, 144, 0.1);
+        }
+
+        .logistics-solution-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--teal);
+        }
+
+        .logistics-solution-card i {
+            font-size: 2.5rem;
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            background: var(--teal-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ================= LOGISTICS CTA ================= */
+        .logistics-cta {
+            background: linear-gradient(135deg, rgba(11, 44, 61, 0.9), rgba(14, 116, 144, 0.9)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 1.5rem;
+        }
+
+        .logistics-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.05"><path d="M0 0h1200v600H0z" fill="none"/><path d="M0 0l1200 600M0 600l1200-600" stroke="white" stroke-width="2"/></svg>');
+            background-size: cover;
+        }
+
+        .logistics-cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logistics-cta h2 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .logistics-cta p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logistics-cta-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ================= QUOTE CALCULATOR ================= */
+        .quote-calculator {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .quote-calculator h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--navy);
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .calculator-input, .calculator-select {
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            border: 2px solid rgba(11, 44, 61, 0.1);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .calculator-input:focus, .calculator-select:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.2);
+        }
+
+        .calculator-submit {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .quote-result {
+            background: rgba(14, 116, 144, 0.05);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .quote-result.active {
+            display: block;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .quote-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--teal);
+            margin: 1rem 0;
+        }
+
+        /* ================= LOGISTICS FAQ ================= */
+        .logistics-faq {
+            background: var(--off-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--navy);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: rgba(14, 116, 144, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 0 2rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            color: var(--teal);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: var(--slate);
+            color: #94A3B8;
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-yellow-gradient);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .footer-logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer-logo-sub {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-yellow);
+            letter-spacing: 1.5px;
+            margin-top: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-yellow);
+            color: var(--navy);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h5 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-yellow);
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-yellow);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: var(--accent-yellow);
+        }
+
+        .newsletter {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin-top: 1.5rem;
+        }
+
+        .newsletter h6 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 2.0rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 1100px) {
+            .logistics-overview-content {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .logistics-overview-image-container {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .logistics-hero {
+                padding: 10rem 0 6rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                box-shadow: -10px 0 40px rgba(11, 44, 61, 0.1);
+                transition: right 0.5s ease;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+                padding: 1rem 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .logistics-overview h2 {
+                font-size: 2.3rem;
+            }
+            
+            .logistics-cta h2 {
+                font-size: 2.8rem;
+            }
+            
+            .logistics-hero-actions,
+            .logistics-cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .logistics-solutions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .logistics-overview-badge {
+                bottom: -20px;
+                right: -20px;
+                padding: 1.25rem;
+                min-width: 160px;
+            }
+            
+            .logistics-overview-badge h4 {
+                font-size: 1.3rem;
+            }
+            
+            .quote-calculator {
+                padding: 2rem;
+            }
+            
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .logistics-hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .logistics-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .logistics-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .logistics-overview h2 {
+                font-size: 2rem;
+            }
+            
+            .logistics-cta h2 {
+                font-size: 2.2rem;
+            }
+            
+            .logistics-solutions-grid,
+            .logistics-services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .logistics-overview-badge {
+                bottom: -15px;
+                right: -15px;
+                padding: 1rem;
+                min-width: 140px;
+            }
+            
+            .logistics-overview-badge h4 {
+                font-size: 1.1rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            .logistics-overview-badge p {
+                font-size: 0.8rem;
+            }
+            
+            .logistics-overview-image {
+                height: 400px;
+            }
+            
+            .quote-calculator {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav class="nav" aria-label="Main Navigation">
+                <a href="main.html" class="logo">
+                    <img src="nyenalogo.png" alt="Nyena Logistics Logo" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-main">NYENA</div>
+                        <div class="logo-sub">LOGISTICS</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="main.html" class="nav-link">Home</a>
+                    <a href="main.html#about" class="nav-link">About</a>
+                    <a href="main.html#services" class="nav-link">Services</a>
+                    <a href="main.html#contact" class="nav-link">Contact</a>
+                    <a href="/track" class="nav-link">Track Shipment</a>
+                    <a href="/partners" class="nav-link">Partners</a>
+                    <a href="/dashboard" class="btn btn-dark">Dashboard</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- LOGISTICS HERO SECTION -->
+        <section class="logistics-hero" aria-labelledby="logistics-hero-title">
+            <div class="container">
+                <div class="logistics-hero-content">
+                    <h1 id="logistics-hero-title">
+                        General Logistics Solutions
+                        <span>End-to-End Supply Chain Management</span>
+                    </h1>
+                    <p>
+                        Comprehensive logistics solutions designed to optimize your supply chain across Africa. From warehousing and inventory management to last-mile delivery and cross-border logistics - we handle it all with precision and reliability.
+                    </p>
+                    <div class="logistics-hero-actions">
+                        <a href="#quote-calculator" class="btn btn-yellow btn-lg">Get Instant Quote</a>
+                        <a href="#logistics-services" class="btn btn-secondary btn-lg"><i class="fas fa-list-alt"></i> View All Services</a>
+                        <a href="/track" class="btn btn-outline btn-lg" style="color: white; border-color: white;"><i class="fas fa-map-marker-alt"></i> Track Shipment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS OVERVIEW SECTION -->
+        <section class="logistics-overview section">
+            <div class="container">
+                <div class="logistics-overview-content">
+                    <div class="logistics-overview-text">
+                        <h2>Your Complete Logistics <span>Partner in Africa</span></h2>
+                        <p>Nyena Logistics provides end-to-end logistics solutions tailored to the unique challenges and opportunities of the African market. Our integrated approach combines technology, local expertise, and strategic infrastructure to deliver reliable, efficient, and cost-effective logistics services.</p>
+                        <p>With operations in 12+ African countries and growing, we understand the complexities of cross-border trade, infrastructure limitations, and market-specific requirements. Our solutions are designed to overcome these challenges while maximizing efficiency and minimizing costs.</p>
+                        
+                        <div class="logistics-overview-features">
+                            <div class="logistics-overview-feature">
+                                <div class="logistics-feature-icon">
+                                    <i class="fas fa-warehouse"></i>
+                                </div>
+                                <div>
+                                    <h3>Strategic Warehousing Network</h3>
+                                    <p>Access to 50+ strategically located warehouses across key African economic hubs with state-of-the-art inventory management systems.</p>
+                                </div>
+                            </div>
+                            <div class="logistics-overview-feature">
+                                <div class="logistics-feature-icon">
+                                    <i class="fas fa-truck-loading"></i>
+                                </div>
+                                <div>
+                                    <h3>Advanced Fleet Management</h3>
+                                    <p>Optimized fleet operations with real-time tracking, predictive maintenance, and efficient route planning across our 5000+ vehicle network.</p>
+                                </div>
+                            </div>
+                            <div class="logistics-overview-feature">
+                                <div class="logistics-feature-icon">
+                                    <i class="fas fa-border-all"></i>
+                                </div>
+                                <div>
+                                    <h3>Cross-Border Expertise</h3>
+                                    <p>Streamlined customs clearance and documentation processes for seamless cross-border logistics across African trade corridors.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#logistics-process" class="btn btn-outline" style="margin-top: 2rem;">
+                            <i class="fas fa-play-circle"></i> See How It Works
+                        </a>
+                    </div>
+                    
+                    <div class="logistics-overview-image-container">
+                        <div class="logistics-overview-image">
+                            <!-- Background image set via CSS -->
+                        </div>
+                        <div class="logistics-overview-badge">
+                            <h4>15,000+</h4>
+                            <p>Successful Deliveries Monthly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS SERVICES DETAIL SECTION -->
+        <section id="logistics-services" class="logistics-services-detail section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Logistics Services</h2>
+                    <p>Comprehensive solutions designed to meet every aspect of your supply chain requirements</p>
+                </div>
+                
+                <div class="logistics-services-grid">
+                    <!-- Warehousing & Storage -->
+                    <div class="logistics-service-card">
+                        <div class="logistics-service-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3>Warehousing & Storage</h3>
+                        <p>Secure, scalable storage solutions with advanced inventory management systems and temperature-controlled options.</p>
+                        
+                        <div class="logistics-service-features">
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Temperature-Controlled Facilities</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-Time Inventory Tracking</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Automated Stock Management</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Secure Access Control</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Distribution & Last-Mile -->
+                    <div class="logistics-service-card">
+                        <div class="logistics-service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Distribution & Last-Mile Delivery</h3>
+                        <p>Efficient distribution networks and reliable last-mile delivery services for urban and rural destinations.</p>
+                        
+                        <div class="logistics-service-features">
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Same-Day Delivery Options</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Route Optimization Technology</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-Time Delivery Tracking</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Proof of Delivery Systems</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Inventory Management -->
+                    <div class="logistics-service-card">
+                        <div class="logistics-service-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Inventory Management</h3>
+                        <p>Advanced inventory control systems providing real-time visibility and automated reordering capabilities.</p>
+                        
+                        <div class="logistics-service-features">
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-Time Stock Monitoring</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Automated Reordering Systems</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Demand Forecasting</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Inventory Analytics Dashboard</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Cross-Border Logistics -->
+                    <div class="logistics-service-card">
+                        <div class="logistics-service-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h3>Cross-Border Logistics</h3>
+                        <p>Seamless cross-border shipping with expert handling of customs clearance and regulatory compliance.</p>
+                        
+                        <div class="logistics-service-features">
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Customs Brokerage Services</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Documentation Management</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Regional Trade Expertise</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Compliance & Regulatory Support</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Returns & Reverse Logistics -->
+                    <div class="logistics-service-card">
+                        <div class="logistics-service-icon">
+                            <i class="fas fa-undo-alt"></i>
+                        </div>
+                        <h3>Returns & Reverse Logistics</h3>
+                        <p>Efficient returns management and reverse logistics solutions to optimize your supply chain efficiency.</p>
+                        
+                        <div class="logistics-service-features">
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Returns Processing Centers</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Product Refurbishment Services</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Asset Recovery Management</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sustainability-Focused Solutions</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Supply Chain Consulting -->
+                    <div class="logistics-service-card">
+                        <div class="logistics-service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Supply Chain Consulting</h3>
+                        <p>Strategic consulting services to optimize your supply chain operations and reduce logistics costs.</p>
+                        
+                        <div class="logistics-service-features">
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Supply Chain Optimization</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cost Reduction Strategies</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Risk Management Planning</span>
+                            </div>
+                            <div class="logistics-service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Technology Implementation</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS PROCESS SECTION -->
+        <section id="logistics-process" class="logistics-process section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Logistics Process</h2>
+                    <p>A streamlined approach to ensure efficiency, transparency, and reliability at every step</p>
+                </div>
+                
+                <div class="logistics-process-steps">
+                    <div class="logistics-process-step">
+                        <div class="logistics-step-number">1</div>
+                        <h3>Consultation & Planning</h3>
+                        <p>We begin with understanding your specific logistics needs, analyzing your supply chain, and developing a customized logistics strategy.</p>
+                        <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> Needs assessment</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> Route optimization</li>
+                            <li><i class="fas fa-check text-teal"></i> Cost analysis</li>
+                        </ul>
+                    </div>
+                    <div class="logistics-process-step">
+                        <div class="logistics-step-number">2</div>
+                        <h3>Implementation & Setup</h3>
+                        <p>Our team implements the logistics plan, setting up necessary systems, technology, and processes tailored to your operations.</p>
+                        <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> System integration</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> Technology deployment</li>
+                            <li><i class="fas fa-check text-teal"></i> Process documentation</li>
+                        </ul>
+                    </div>
+                    <div class="logistics-process-step">
+                        <div class="logistics-step-number">3</div>
+                        <h3>Execution & Monitoring</h3>
+                        <p>We manage the day-to-day logistics operations with real-time monitoring and proactive issue resolution.</p>
+                        <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> Real-time tracking</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> Performance monitoring</li>
+                            <li><i class="fas fa-check text-teal"></i> Quality control</li>
+                        </ul>
+                    </div>
+                    <div class="logistics-process-step">
+                        <div class="logistics-step-number">4</div>
+                        <h3>Optimization & Reporting</h3>
+                        <p>Continuous improvement through data analysis, performance reporting, and strategic optimization of your logistics operations.</p>
+                        <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> Performance analytics</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-teal"></i> Cost optimization</li>
+                            <li><i class="fas fa-check text-teal"></i> Strategic reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUOTE CALCULATOR SECTION -->
+        <section id="quote-calculator" class="section bg-off-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get Your Logistics Quote</h2>
+                    <p>Calculate estimated costs for your logistics requirements with our instant quote calculator</p>
+                </div>
+                
+                <div class="quote-calculator">
+                    <h3>Logistics Cost Calculator</h3>
+                    <form class="calculator-form" id="quoteCalculatorForm">
+                        <div class="form-group">
+                            <label for="shipment-type">Shipment Type</label>
+                            <select id="shipment-type" class="calculator-select" required>
+                                <option value="">Select shipment type</option>
+                                <option value="parcel">Parcel (Under 10kg)</option>
+                                <option value="small">Small Freight (10-100kg)</option>
+                                <option value="medium">Medium Freight (100-500kg)</option>
+                                <option value="large">Large Freight (500kg+)</option>
+                                <option value="pallet">Palletized Goods</option>
+                                <option value="container">Container Load</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="origin">Origin Location</label>
+                            <select id="origin" class="calculator-select" required>
+                                <option value="">Select origin</option>
+                                <option value="accra">Accra, Ghana</option>
+                                <option value="lagos">Lagos, Nigeria</option>
+                                <option value="nairobi">Nairobi, Kenya</option>
+                                <option value="johannesburg">Johannesburg, South Africa</option>
+                                <option value="abidjan">Abidjan, Côte d'Ivoire</option>
+                                <option value="dar-es-salaam">Dar es Salaam, Tanzania</option>
+                                <option value="other">Other African City</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <select id="destination" class="calculator-select" required>
+                                <option value="">Select destination</option>
+                                <option value="accra">Accra, Ghana</option>
+                                <option value="lagos">Lagos, Nigeria</option>
+                                <option value="nairobi">Nairobi, Kenya</option>
+                                <option value="johannesburg">Johannesburg, South Africa</option>
+                                <option value="abidjan">Abidjan, Côte d'Ivoire</option>
+                                <option value="dar-es-salaam">Dar es Salaam, Tanzania</option>
+                                <option value="other">Other African City</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="distance">Approximate Distance (km)</label>
+                            <input type="number" id="distance" class="calculator-input" placeholder="Enter distance in kilometers" min="1" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgency">Delivery Urgency</label>
+                            <select id="urgency" class="calculator-select" required>
+                                <option value="standard">Standard (5-7 days)</option>
+                                <option value="express">Express (2-4 days)</option>
+                                <option value="priority">Priority (24-48 hours)</option>
+                                <option value="same-day">Same Day Delivery</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="value">Cargo Value ($)</label>
+                            <input type="number" id="value" class="calculator-input" placeholder="Estimated cargo value" min="0" required>
+                        </div>
+                        
+                        <div class="calculator-submit">
+                            <button type="submit" class="btn btn-yellow btn-lg">
+                                <i class="fas fa-calculator"></i> Calculate Quote
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="quote-result" id="quoteResult">
+                        <h4>Your Estimated Logistics Cost</h4>
+                        <div class="quote-amount" id="quoteAmount">$0.00</div>
+                        <p>This is an estimated cost based on your inputs. Final pricing may vary based on specific requirements, customs duties, and other factors.</p>
+                        <button class="btn btn-primary" style="margin-top: 1rem;">
+                            <i class="fas fa-envelope"></i> Get Detailed Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS SOLUTIONS SECTION -->
+        <section class="logistics-solutions section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tailored Solutions</h2>
+                    <p>Industry-specific logistics solutions designed to address unique challenges and requirements</p>
+                </div>
+                
+                <div class="logistics-solutions-grid">
+                    <div class="logistics-solution-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>E-commerce Logistics</h3>
+                        <p>End-to-end solutions for online retailers including warehousing, pick-pack-ship, and last-mile delivery.</p>
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="logistics-solution-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>Manufacturing Logistics</h3>
+                        <p>Raw material sourcing, production line support, and finished goods distribution for manufacturers.</p>
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="logistics-solution-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Healthcare Logistics</h3>
+                        <p>Temperature-controlled transport and storage for pharmaceuticals and medical supplies.</p>
+                        <button class="btn btn-outline" style="margin-top: 1.5rem;">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS FAQ SECTION -->
+        <section class="logistics-faq section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find answers to common questions about our general logistics services</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What areas in Africa do you cover for logistics services?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We currently operate in 12+ African countries including Ghana, Nigeria, Kenya, South Africa, Côte d'Ivoire, Tanzania, Uganda, Rwanda, Senegal, Ethiopia, Zambia, and Mozambique. Our network is continuously expanding to cover more regions across the continent.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do you ensure the safety and security of shipments?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We implement multiple security measures including GPS tracking for all vehicles, secure warehousing with 24/7 surveillance, tamper-evident packaging, and trained security personnel. All high-value shipments receive additional security protocols and insurance coverage.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is your typical delivery timeframe for cross-border shipments?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Delivery timeframes vary based on destination and service level. Standard cross-border shipments typically take 5-7 business days, express services deliver in 2-4 business days, and priority services offer 24-48 hour delivery. Customs clearance can add 1-3 days depending on the countries involved.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer temperature-controlled logistics for sensitive goods?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we have specialized temperature-controlled logistics solutions for pharmaceuticals, perishable foods, and other sensitive goods. Our fleet includes refrigerated vehicles, and we maintain temperature-controlled warehouses with real-time monitoring systems to ensure product integrity throughout the supply chain.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How can I track my shipment in real-time?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All shipments come with real-time tracking accessible through our customer dashboard, mobile app, or via SMS/email updates. You'll receive a unique tracking number that allows you to monitor your shipment's location, estimated arrival time, and delivery status 24/7.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What documentation is required for cross-border shipments?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Required documentation typically includes commercial invoice, packing list, certificate of origin, bill of lading/waybill, and any product-specific certificates or licenses. Our customs brokerage team will guide you through the specific requirements for your shipment's origin and destination countries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS CTA SECTION -->
+        <section class="logistics-cta section">
+            <div class="container">
+                <div class="logistics-cta-content">
+                    <h2>Ready to Optimize Your Supply Chain?</h2>
+                    <p>Join hundreds of businesses across Africa that trust Nyena Logistics for their general logistics needs. Get started today with a free consultation and customized logistics strategy.</p>
+                    
+                    <div class="logistics-cta-actions">
+                        <a href="/auth/register" class="btn btn-yellow btn-lg"><i class="fas fa-user-plus"></i> Create Business Account</a>
+                        <a href="/contact" class="btn btn-secondary btn-lg"><i class="fas fa-calendar-alt"></i> Schedule Consultation</a>
+                        <a href="tel:+233123456789" class="btn btn-outline btn-lg" style="color: white; border-color: white;"><i class="fas fa-phone-alt"></i> Call Our Experts</a>
+                    </div>
+                    
+                    <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.8;">
+                        <i class="fas fa-clock"></i> Get a response within 2 hours | 
+                        <i class="fas fa-shield-alt"></i> 100% secure & confidential
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Nyena Logistics Logo" class="footer-logo-img">
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-main">NYENA</div>
+                            <div class="footer-logo-sub">LOGISTICS</div>
+                        </div>
+                    </div>
+                    <p>Africa's premier integrated logistics platform, connecting businesses with smarter movement and infrastructure solutions across the continent.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Logistics Services</h5>
+                    <ul>
+                        <li><a href="#logistics-services"><i class="fas fa-chevron-right"></i> Warehousing & Storage</a></li>
+                        <li><a href="#logistics-services"><i class="fas fa-chevron-right"></i> Distribution & Delivery</a></li>
+                        <li><a href="#logistics-services"><i class="fas fa-chevron-right"></i> Inventory Management</a></li>
+                        <li><a href="#logistics-services"><i class="fas fa-chevron-right"></i> Cross-Border Logistics</a></li>
+                        <li><a href="#logistics-services"><i class="fas fa-chevron-right"></i> Returns Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="main.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="/leadership"><i class="fas fa-chevron-right"></i> Leadership Team</a></li>
+                        <li><a href="/careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                        <li><a href="/news"><i class="fas fa-chevron-right"></i> News & Media</a></li>
+                        <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="/blog"><i class="fas fa-chevron-right"></i> Logistics Blog</a></li>
+                        <li><a href="#logistics-faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="/api"><i class="fas fa-chevron-right"></i> Logistics API</a></li>
+                        <li><a href="/partners"><i class="fas fa-chevron-right"></i> Become a Partner</a></li>
+                        <li><a href="/support"><i class="fas fa-chevron-right"></i> Customer Support</a></li>
+                    </ul>
+                    
+                    <div class="newsletter">
+                        <h6>Get Logistics Insights</h6>
+                        <p>Subscribe to our logistics newsletter</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-yellow" style="padding: 0.75rem 1.5rem;"><i class="fa-solid fa-bell"></i> </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Nyena Logistics Ltd. All Rights Reserved. | <a href="/privacy" style="color: var(--accent-yellow);">Privacy Policy</a> | <a href="/terms" style="color: var(--accent-yellow);">Terms of Service</a> | <a href="/cookies" style="color: var(--accent-yellow);">Cookie Policy</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;"><i>Headquarters: Greater Accra, Ghana | Regional Offices: Kumasi, Takoradi</i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            navLinks.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking outside or on a link
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Quote Calculator
+        const quoteCalculatorForm = document.getElementById('quoteCalculatorForm');
+        const quoteResult = document.getElementById('quoteResult');
+        const quoteAmount = document.getElementById('quoteAmount');
+
+        if (quoteCalculatorForm) {
+            quoteCalculatorForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const shipmentType = document.getElementById('shipment-type').value;
+                const origin = document.getElementById('origin').value;
+                const destination = document.getElementById('destination').value;
+                const distance = parseFloat(document.getElementById('distance').value) || 0;
+                const urgency = document.getElementById('urgency').value;
+                const value = parseFloat(document.getElementById('value').value) || 0;
+                
+                // Calculate base price
+                let basePrice = 0;
+                
+                // Shipment type multiplier
+                const shipmentMultipliers = {
+                    'parcel': 5,
+                    'small': 15,
+                    'medium': 50,
+                    'large': 150,
+                    'pallet': 300,
+                    'container': 800
+                };
+                
+                // Urgency multiplier
+                const urgencyMultipliers = {
+                    'standard': 1.0,
+                    'express': 1.5,
+                    'priority': 2.0,
+                    'same-day': 3.0
+                };
+                
+                // Calculate price
+                if (shipmentType && distance > 0) {
+                    basePrice = shipmentMultipliers[shipmentType] * distance;
+                    
+                    // Apply urgency multiplier
+                    basePrice *= urgencyMultipliers[urgency];
+                    
+                    // Add insurance (1% of value)
+                    const insurance = value * 0.01;
+                    basePrice += insurance;
+                    
+                    // Minimum price
+                    if (basePrice < 10) basePrice = 10;
+                    
+                    // Display result
+                    quoteAmount.textContent = `$${basePrice.toFixed(2)}`;
+                    quoteResult.classList.add('active');
+                    
+                    // Scroll to result
+                    quoteResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const toggle = question.querySelector('.faq-toggle');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').classList.remove('active');
+                    }
+                });
+                
+                // Toggle current FAQ
+                item.classList.toggle('active');
+                answer.classList.toggle('active');
+                toggle.textContent = item.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Scroll animation
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+
+        // Initialize scroll animation
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Animate stats counter (removed from HTML but keeping function for future use)
+        const animateStats = () => {
+            const stats = document.querySelectorAll('.logistics-stat-number');
+            if (stats.length === 0) return;
+            
+            const statValues = [99.5, 50, 5000, 24];
+            
+            stats.forEach((stat, index) => {
+                const targetValue = statValues[index];
+                const duration = 2000;
+                const increment = targetValue / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < targetValue) {
+                        current += increment;
+                        if (current > targetValue) current = targetValue;
+                        
+                        if (stat.textContent.includes('%')) {
+                            stat.textContent = current.toFixed(1) + '%';
+                        } else if (stat.textContent.includes('/')) {
+                            stat.textContent = '24/7';
+                        } else {
+                            stat.textContent = Math.floor(current) + '+';
+                        }
+                        
+                        requestAnimationFrame(updateCounter);
+                    }
+                };
+                
+                // Start animation when element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(stat);
+            });
+        };
+
+        // Add animation classes to elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation class to service cards
+            const serviceCards = document.querySelectorAll('.logistics-service-card');
+            serviceCards.forEach((card, index) => {
+                card.classList.add('animate-on-scroll');
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation to process steps
+            const processSteps = document.querySelectorAll('.logistics-process-step');
+            processSteps.forEach((step, index) => {
+                step.classList.add('animate-on-scroll');
+                step.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation to solution cards
+            const solutionCards = document.querySelectorAll('.logistics-solution-card');
+            solutionCards.forEach((card, index) => {
+                card.classList.add('animate-on-scroll');
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Nyena Court - Premium apartment rentals in prime locations. Modern living spaces with luxury amenities for short and long-term stays.">
+    <meta name="keywords" content="apartments, rental, real estate, Nyena Court, luxury apartments, short-term rentals, furnished apartments, Ghana real estate">
+    <title>Nyena Court | Premium Apartment Rentals</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ================= ROOT VARIABLES (Real Estate Focus) ================= */
+        :root {
+            --navy: #0B2C3D;
+            --teal: #0E7490;
+            --gold: #D4AF37;
+            --off-white: #F8FAFC;
+            --slate: #0F172A;
+            
+            /* Real estate specific colors */
+            --property-blue: #1E3A8A;
+            --property-green: #065F46;
+            --property-red: #DC2626;
+            --property-purple: #7C3AED;
+            --light-gray: #F1F5F9;
+            --medium-gray: #CBD5E1;
+            
+            /* Creative blends */
+            --teal-light: #0EA5E9;
+            --teal-dark: #075985;
+            --gold-light: #FBBF24;
+            --gold-dark: #B45309;
+            --navy-light: #164E63;
+            --navy-gradient: linear-gradient(135deg, #0B2C3D 0%, #164E63 100%);
+            --teal-gradient: linear-gradient(135deg, #0E7490 0%, #0EA5E9 100%);
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #FBBF24 100%);
+            --green-gradient: linear-gradient(135deg, #065F46 0%, #10B981 100%);
+            --blue-gradient: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            
+            /* Accent yellowish color */
+            --accent-yellow: #FFD700;
+            --accent-yellow-light: #FFF380;
+            --accent-yellow-gradient: linear-gradient(135deg, #FFD700 0%, #FFE55C 100%);
+            
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --shadow: 0 20px 40px rgba(11, 44, 61, 0.08);
+            --shadow-hover: 0 30px 60px rgba(11, 44, 61, 0.15);
+            --shadow-gold: 0 15px 35px rgba(212, 175, 55, 0.15);
+            --shadow-yellow: 0 15px 35px rgba(255, 215, 0, 0.25);
+            --shadow-property: 0 10px 30px rgba(11, 44, 61, 0.12);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ================= RESET & BASE ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--off-white);
+            color: var(--slate);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ================= ANIMATIONS ================= */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes badgePulse {
+            0% { box-shadow: 0 5px 20px rgba(6, 95, 70, 0.3); }
+            50% { box-shadow: 0 10px 30px rgba(6, 95, 70, 0.5); }
+            100% { box-shadow: 0 5px 20px rgba(6, 95, 70, 0.3); }
+        }
+
+        /* ================= UTILITY CLASSES ================= */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .text-center { text-align: center; }
+        .text-teal { color: var(--teal); }
+        .text-gold { color: var(--gold); }
+        .text-navy { color: var(--navy); }
+        .text-white { color: white; }
+        .text-green { color: var(--property-green); }
+        .text-blue { color: var(--property-blue); }
+        .text-red { color: var(--property-red); }
+        .bg-gradient-navy { background: var(--navy-gradient); }
+        .bg-gradient-teal { background: var(--teal-gradient); }
+        .bg-gradient-gold { background: var(--gold-gradient); }
+        .bg-gradient-green { background: var(--green-gradient); }
+        .bg-gradient-blue { background: var(--blue-gradient); }
+        .bg-off-white { background: var(--off-white); }
+        .bg-light-gray { background: var(--light-gray); }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag-available { background: rgba(6, 95, 70, 0.1); color: var(--property-green); }
+        .tag-occupied { background: rgba(220, 38, 38, 0.1); color: var(--property-red); }
+        .tag-featured { background: rgba(212, 175, 55, 0.1); color: var(--gold-dark); }
+        .tag-furnished { background: rgba(124, 58, 237, 0.1); color: var(--property-purple); }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= BUTTONS ================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.25rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--green-gradient);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(6, 95, 70, 0.2);
+        }
+
+        .btn-secondary {
+            background: var(--blue-gradient);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(30, 58, 138, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--property-green);
+            border-color: var(--property-green);
+        }
+
+        .btn-outline:hover {
+            background: var(--property-green);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: var(--navy);
+            font-weight: 800;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-lg {
+            padding: 1.25rem 3rem;
+            font-size: 1.15rem;
+        }
+
+        /* ================= NAVBAR ================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 10px 30px rgba(11, 44, 61, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .nav {
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--property-green);
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--navy);
+            padding: 0.5rem 0;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--green-gradient);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--property-green);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            color: var(--navy);
+            z-index: 1001;
+        }
+
+        /* ================= REAL ESTATE HERO ================= */
+        .property-hero {
+            padding: 12rem 0 8rem;
+            background: var(--navy-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .property-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.03"><path d="M0 0h1200v600H0z" fill="none"/><rect x="100" y="100" width="200" height="200" rx="20" fill="white"/><rect x="400" y="250" width="300" height="150" rx="15" fill="white"/><rect x="800" y="150" width="250" height="250" rx="25" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        .property-hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(6, 95, 70, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .property-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .property-hero h1 {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .property-hero h1 span {
+            background: var(--green-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .property-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+
+        .hero-property-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .hero-badge i {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-yellow);
+        }
+
+        /* ================= PROPERTY FILTERS ================= */
+        .property-filters {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-property);
+            margin-top: -4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .filter-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .filter-select, .filter-input {
+            padding: 0.9rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 2px solid var(--medium-gray);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .filter-select:focus, .filter-input:focus {
+            outline: none;
+            border-color: var(--property-green);
+            box-shadow: 0 0 0 3px rgba(6, 95, 70, 0.1);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        /* ================= AVAILABLE PROPERTIES ================= */
+        .properties {
+            background: var(--light-gray);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--green-gradient);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--slate);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .property-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-property);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .property-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge-available {
+            background: var(--green-gradient);
+            color: white;
+            animation: badgePulse 2s infinite;
+        }
+
+        .badge-featured {
+            background: var(--gold-gradient);
+            color: var(--navy);
+        }
+
+        .property-image {
+            height: 250px;
+            width: 100%;
+            background: linear-gradient(45deg, var(--navy), var(--teal));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .property-card:hover .property-image img {
+            transform: scale(1.1);
+        }
+
+        .property-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .property-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .property-price span {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .property-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .property-action-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .property-action-btn:hover {
+            background: var(--accent-yellow);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .property-content {
+            padding: 2rem;
+        }
+
+        .property-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .property-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .property-location i {
+            color: var(--property-red);
+        }
+
+        .property-features {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .property-feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 1.25rem;
+            color: var(--property-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--navy);
+        }
+
+        .feature-label {
+            font-size: 0.85rem;
+            color: var(--slate);
+            opacity: 0.7;
+        }
+
+        .property-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .property-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ================= PROPERTY DETAILS ================= */
+        .property-details {
+            background: white;
+        }
+
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .detail-gallery {
+            position: sticky;
+            top: 120px;
+        }
+
+        .main-image {
+            height: 400px;
+            width: 100%;
+            background: var(--light-gray);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .thumbnail {
+            height: 100px;
+            background: var(--light-gray);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .thumbnail:hover {
+            transform: translateY(-5px);
+        }
+
+        .thumbnail.active {
+            border: 3px solid var(--property-green);
+        }
+
+        .detail-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-price {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--property-green);
+            margin-bottom: 2rem;
+        }
+
+        .detail-price span {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--slate);
+        }
+
+        .detail-description {
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .detail-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .detail-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .detail-feature i {
+            width: 50px;
+            height: 50px;
+            background: rgba(6, 95, 70, 0.1);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--property-green);
+            font-size: 1.25rem;
+        }
+
+        .detail-booking {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            margin-top: 3rem;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-sm);
+            border: 2px solid var(--medium-gray);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--property-green);
+            box-shadow: 0 0 0 3px rgba(6, 95, 70, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .availability-calendar {
+            margin-top: 3rem;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+        }
+
+        .calendar-day {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            background: white;
+            border: 1px solid var(--light-gray);
+        }
+
+        .calendar-day.available {
+            background: rgba(6, 95, 70, 0.1);
+            color: var(--property-green);
+            border-color: var(--property-green);
+        }
+
+        .calendar-day.booked {
+            background: rgba(220, 38, 38, 0.1);
+            color: var(--property-red);
+            border-color: var(--property-red);
+            text-decoration: line-through;
+        }
+
+        /* ================= AMENITIES ================= */
+        .amenities {
+            background: var(--light-gray);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .amenity-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-property);
+            transition: var(--transition);
+        }
+
+        .amenity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .amenity-card i {
+            font-size: 2.5rem;
+            color: var(--property-green);
+            margin-bottom: 1.5rem;
+            background: var(--green-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ================= LOCATION ================= */
+        .location {
+            background: white;
+        }
+
+        .location-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .location-map {
+            height: 400px;
+            background: var(--light-gray);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--navy), var(--teal));
+            color: white;
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .location-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-list {
+            margin-bottom: 2rem;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .location-item i {
+            color: var(--property-green);
+            font-size: 1.25rem;
+        }
+
+        /* ================= INQUIRY ================= */
+        .inquiry {
+            background: var(--navy-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inquiry::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.03"><path d="M0 0h1200v600H0z" fill="none"/><path d="M0 300l1200-300v600L0 300z" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        .inquiry-container {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .inquiry-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .inquiry-info h2 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .inquiry-info p {
+            opacity: 0.9;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--accent-yellow);
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: var(--slate);
+            color: #94A3B8;
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--green-gradient);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .footer-logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer-logo-sub {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-yellow);
+            letter-spacing: 1.5px;
+            margin-top: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-yellow);
+            color: var(--navy);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h5 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-yellow);
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-yellow);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: var(--accent-yellow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        /* ================= MODAL ================= */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 44, 61, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--radius-lg);
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(50px);
+            transition: transform 0.5s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .modal-header h3 {
+            font-size: 1.8rem;
+            color: var(--navy);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            background: var(--property-red);
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 1100px) {
+            .detail-container,
+            .location-container,
+            .inquiry-container {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .detail-gallery {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .property-hero {
+                padding: 10rem 0 6rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                box-shadow: -10px 0 40px rgba(11, 44, 61, 0.1);
+                transition: right 0.5s ease;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+                padding: 1rem 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+            
+            .property-filters {
+                margin-top: -2rem;
+                padding: 1.5rem;
+            }
+            
+            .filter-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .detail-content h1 {
+                font-size: 2rem;
+            }
+            
+            .detail-price {
+                font-size: 2.2rem;
+            }
+            
+            .detail-features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero-property-badges {
+                gap: 1rem;
+            }
+            
+            .hero-badge {
+                min-width: 120px;
+                padding: 1.25rem;
+            }
+            
+            .property-overlay {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .property-actions {
+                align-self: flex-end;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .property-hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .property-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .property-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .inquiry-info h2 {
+                font-size: 2.2rem;
+            }
+            
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .thumbnail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero-property-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-badge {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .property-features {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 1.5rem;
+            }
+            
+            .property-feature {
+                flex: 1;
+                min-width: calc(50% - 0.75rem);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .inquiry-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav class="nav" aria-label="Main Navigation">
+                <a href="main.html" class="logo">
+                    <img src="nyenalogo.png" alt="Nyena Court Logo" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-main">NYENA COURT</div>
+                        <div class="logo-sub">PREMIUM APARTMENTS</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="#properties" class="nav-link">Properties</a>
+                    <a href="#amenities" class="nav-link">Amenities</a>
+                    <a href="#location" class="nav-link">Location</a>
+                    <a href="#inquiry" class="nav-link">Inquire</a>
+                    <a href="/real-estate" class="nav-link">Real Estate</a>
+                    <a href="/logistics" class="nav-link">Logistics</a>
+                    <a href="/dashboard" class="btn btn-primary">My Dashboard</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section class="property-hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="property-hero-content">
+                    <h1 id="hero-title">
+                        Luxury Living at
+                        <span>Nyena Court</span>
+                    </h1>
+                    <p>
+                        Premium apartment rentals in prime locations across Ghana. Experience modern living with luxury amenities, security, and convenience for both short and long-term stays.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#properties" class="btn btn-primary btn-lg">View Available Apartments</a>
+                        <a href="#inquiry" class="btn btn-secondary btn-lg"><i class="fas fa-calendar-alt"></i> Schedule Viewing</a>
+                    </div>
+                    
+                    <div class="hero-property-badges">
+                        <div class="hero-badge">
+                            <i class="fas fa-building"></i>
+                            <div class="badge-text">15+ Properties</div>
+                        </div>
+                        <div class="hero-badge">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="badge-text">3 Prime Locations</div>
+                        </div>
+                        <div class="hero-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="badge-text">24/7 Security</div>
+                        </div>
+                        <div class="hero-badge">
+                            <i class="fas fa-wifi"></i>
+                            <div class="badge-text">High-Speed Internet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROPERTY FILTERS -->
+        <div class="container">
+            <div class="property-filters">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label class="filter-label">Location</label>
+                        <select class="filter-select">
+                            <option value="">All Locations</option>
+                            <option value="accra">Accra Central</option>
+                            <option value="east-legon">East Legon</option>
+                            <option value="airport">Airport Residential</option>
+                            <option value="cantoments">Cantoments</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Apartment Type</label>
+                        <select class="filter-select">
+                            <option value="">All Types</option>
+                            <option value="studio">Studio</option>
+                            <option value="1-bedroom">1 Bedroom</option>
+                            <option value="2-bedroom">2 Bedroom</option>
+                            <option value="3-bedroom">3 Bedroom</option>
+                            <option value="penthouse">Penthouse</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Price Range</label>
+                        <select class="filter-select">
+                            <option value="">Any Price</option>
+                            <option value="0-1000">$500 - $1,000/month</option>
+                            <option value="1000-2000">$1,000 - $2,000/month</option>
+                            <option value="2000-3000">$2,000 - $3,000/month</option>
+                            <option value="3000+">$3,000+/month</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group filter-actions">
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-search"></i> Search Apartments
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AVAILABLE PROPERTIES -->
+        <section id="properties" class="properties section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Available Apartments</h2>
+                    <p>Browse our selection of premium apartments available for rent. All properties come fully furnished with modern amenities.</p>
+                </div>
+                
+                <div class="property-grid">
+                    <!-- Property 1 -->
+                    <div class="property-card">
+                        <div class="property-badge badge-available">Available Now</div>
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Studio Apartment">
+                            <div class="property-overlay">
+                                <div class="property-price">$850<span>/month</span></div>
+                                <div class="property-actions">
+                                    <button class="property-action-btn" onclick="openModal('property1')">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                    <button class="property-action-btn" onclick="saveProperty('property1')">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Modern Studio Apartment</h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Accra Central, Greater Accra</span>
+                            </div>
+                            
+                            <div class="property-features">
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bed"></i></div>
+                                    <div class="feature-value">1</div>
+                                    <div class="feature-label">Bedroom</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bath"></i></div>
+                                    <div class="feature-value">1</div>
+                                    <div class="feature-label">Bathroom</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+                                    <div class="feature-value">650</div>
+                                    <div class="feature-label">Sq Ft</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                                    <div class="feature-value">1</div>
+                                    <div class="feature-label">Parking</div>
+                                </div>
+                            </div>
+                            
+                            <div class="property-tags">
+                                <span class="tag tag-furnished">Fully Furnished</span>
+                                <span class="tag tag-available">Available Now</span>
+                            </div>
+                            
+                            <div class="property-footer">
+                                <a href="#inquiry" class="btn btn-outline">Inquire Now</a>
+                                <a href="#booking" class="btn btn-primary">Book Viewing</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property 2 -->
+                    <div class="property-card">
+                        <div class="property-badge badge-featured">Featured</div>
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury 2-Bedroom Apartment">
+                            <div class="property-overlay">
+                                <div class="property-price">$1,650<span>/month</span></div>
+                                <div class="property-actions">
+                                    <button class="property-action-btn" onclick="openModal('property2')">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                    <button class="property-action-btn" onclick="saveProperty('property2')">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Luxury 2-Bedroom Apartment</h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>East Legon, Greater Accra</span>
+                            </div>
+                            
+                            <div class="property-features">
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bed"></i></div>
+                                    <div class="feature-value">2</div>
+                                    <div class="feature-label">Bedrooms</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bath"></i></div>
+                                    <div class="feature-value">2</div>
+                                    <div class="feature-label">Bathrooms</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+                                    <div class="feature-value">1,200</div>
+                                    <div class="feature-label">Sq Ft</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                                    <div class="feature-value">2</div>
+                                    <div class="feature-label">Parking</div>
+                                </div>
+                            </div>
+                            
+                            <div class="property-tags">
+                                <span class="tag tag-furnished">Fully Furnished</span>
+                                <span class="tag tag-available">Available Now</span>
+                                <span class="tag tag-featured">Swimming Pool</span>
+                            </div>
+                            
+                            <div class="property-footer">
+                                <a href="#inquiry" class="btn btn-outline">Inquire Now</a>
+                                <a href="#booking" class="btn btn-primary">Book Viewing</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property 3 -->
+                    <div class="property-card">
+                        <div class="property-badge badge-available">Available Now</div>
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Executive 3-Bedroom Penthouse">
+                            <div class="property-overlay">
+                                <div class="property-price">$2,850<span>/month</span></div>
+                                <div class="property-actions">
+                                    <button class="property-action-btn" onclick="openModal('property3')">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                    <button class="property-action-btn" onclick="saveProperty('property3')">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Executive 3-Bedroom Penthouse</h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Airport Residential, Greater Accra</span>
+                            </div>
+                            
+                            <div class="property-features">
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bed"></i></div>
+                                    <div class="feature-value">3</div>
+                                    <div class="feature-label">Bedrooms</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bath"></i></div>
+                                    <div class="feature-value">3.5</div>
+                                    <div class="feature-label">Bathrooms</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+                                    <div class="feature-value">2,400</div>
+                                    <div class="feature-label">Sq Ft</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                                    <div class="feature-value">3</div>
+                                    <div class="feature-label">Parking</div>
+                                </div>
+                            </div>
+                            
+                            <div class="property-tags">
+                                <span class="tag tag-furnished">Fully Furnished</span>
+                                <span class="tag tag-available">Available Now</span>
+                                <span class="tag tag-featured">City View</span>
+                            </div>
+                            
+                            <div class="property-footer">
+                                <a href="#inquiry" class="btn btn-outline">Inquire Now</a>
+                                <a href="#booking" class="btn btn-primary">Book Viewing</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property 4 -->
+                    <div class="property-card">
+                        <div class="property-badge badge-available">Available Now</div>
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1574362848149-114c9492450a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="1-Bedroom Executive Suite">
+                            <div class="property-overlay">
+                                <div class="property-price">$1,200<span>/month</span></div>
+                                <div class="property-actions">
+                                    <button class="property-action-btn" onclick="openModal('property4')">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                    <button class="property-action-btn" onclick="saveProperty('property4')">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">1-Bedroom Executive Suite</h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Cantoments, Greater Accra</span>
+                            </div>
+                            
+                            <div class="property-features">
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bed"></i></div>
+                                    <div class="feature-value">1</div>
+                                    <div class="feature-label">Bedroom</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-bath"></i></div>
+                                    <div class="feature-value">1</div>
+                                    <div class="feature-label">Bathroom</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+                                    <div class="feature-value">850</div>
+                                    <div class="feature-label">Sq Ft</div>
+                                </div>
+                                <div class="property-feature">
+                                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                                    <div class="feature-value">1</div>
+                                    <div class="feature-label">Parking</div>
+                                </div>
+                            </div>
+                            
+                            <div class="property-tags">
+                                <span class="tag tag-furnished">Fully Furnished</span>
+                                <span class="tag tag-available">Available Now</span>
+                                <span class="tag tag-featured">Gym Access</span>
+                            </div>
+                            
+                            <div class="property-footer">
+                                <a href="#inquiry" class="btn btn-outline">Inquire Now</a>
+                                <a href="#booking" class="btn btn-primary">Book Viewing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 4rem;">
+                    <a href="#properties" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-building"></i> View All Properties (15+)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROPERTY DETAILS MODAL -->
+        <div class="modal" id="propertyModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Modern Studio Apartment</h3>
+                    <div class="close-modal" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="property-details">
+                        <div class="detail-price">$850<span>/month</span></div>
+                        
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Modern Studio Apartment">
+                        </div>
+                        
+                        <div class="thumbnail-grid">
+                            <div class="thumbnail active">
+                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Living Room">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bedroom">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://images.unsplash.com/photo-1574362848149-114c9492450a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kitchen">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bathroom">
+                            </div>
+                        </div>
+                        
+                        <div class="detail-description">
+                            <p>This modern studio apartment in Accra Central offers contemporary living in a prime location. Perfect for professionals and students, this fully furnished unit includes all utilities and high-speed internet.</p>
+                            <p>The apartment features an open-concept living area, fully equipped kitchenette, spacious bathroom, and a comfortable sleeping area. Building amenities include 24/7 security, laundry facilities, and a common lounge area.</p>
+                        </div>
+                        
+                        <div class="detail-features-grid">
+                            <div class="detail-feature">
+                                <i class="fas fa-bed"></i>
+                                <div>
+                                    <h4>1 Bedroom</h4>
+                                    <p>Queen size bed with premium mattress</p>
+                                </div>
+                            </div>
+                            <div class="detail-feature">
+                                <i class="fas fa-bath"></i>
+                                <div>
+                                    <h4>1 Bathroom</h4>
+                                    <p>Modern fixtures with hot water</p>
+                                </div>
+                            </div>
+                            <div class="detail-feature">
+                                <i class="fas fa-wifi"></i>
+                                <div>
+                                    <h4>High-Speed Internet</h4>
+                                    <p>Unlimited fiber optic connection</p>
+                                </div>
+                            </div>
+                            <div class="detail-feature">
+                                <i class="fas fa-car"></i>
+                                <div>
+                                    <h4>1 Parking Space</h4>
+                                    <p>Secure underground parking</p>
+                                </div>
+                            </div>
+                            <div class="detail-feature">
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <h4>Fully Equipped Kitchen</h4>
+                                    <p>Refrigerator, microwave, stove</p>
+                                </div>
+                            </div>
+                            <div class="detail-feature">
+                                <i class="fas fa-tv"></i>
+                                <div>
+                                    <h4>Smart TV</h4>
+                                    <p>40" LED with streaming apps</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-booking">
+                            <h3 style="margin-bottom: 1.5rem;">Book a Viewing</h3>
+                            <form class="booking-form">
+                                <div class="form-group">
+                                    <label class="form-label">Preferred Date</label>
+                                    <input type="date" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Preferred Time</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Time</option>
+                                        <option value="9am">9:00 AM</option>
+                                        <option value="11am">11:00 AM</option>
+                                        <option value="2pm">2:00 PM</option>
+                                        <option value="4pm">4:00 PM</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-input" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-calendar-check"></i> Schedule Viewing
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AMENITIES SECTION -->
+        <section id="amenities" class="amenities section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Premium Amenities</h2>
+                    <p>All Nyena Court properties come with exceptional amenities designed for comfort and convenience.</p>
+                </div>
+                
+                <div class="amenities-grid">
+                    <div class="amenity-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>24/7 Security</h3>
+                        <p>Gated communities with CCTV surveillance and security personnel for your safety.</p>
+                    </div>
+                    <div class="amenity-card">
+                        <i class="fas fa-swimming-pool"></i>
+                        <h3>Swimming Pool</h3>
+                        <p>Refreshing swimming pools available at select locations for residents.</p>
+                    </div>
+                    <div class="amenity-card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Fitness Center</h3>
+                        <p>Fully equipped gyms with modern exercise equipment.</p>
+                    </div>
+                    <div class="amenity-card">
+                        <i class="fas fa-wifi"></i>
+                        <h3>High-Speed Internet</h3>
+                        <p>Unlimited fiber optic internet included in all properties.</p>
+                    </div>
+                    <div class="amenity-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Fully Furnished</h3>
+                        <p>All apartments come fully furnished with quality furniture and appliances.</p>
+                    </div>
+                    <div class="amenity-card">
+                        <i class="fas fa-car"></i>
+                        <h3>Secure Parking</h3>
+                        <p>Designated parking spaces with 24/7 surveillance.</p>
+                    </div>
+                    <div class="amenity-card">
+                        <i class="fas fa-tint"></i>
+                        <h3>Water & Electricity</h3>
+                        <p>24/7 water supply and reliable electricity with backup generators.</p>
+                    </div>
+                    <div class="amenity-card">
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>Concierge Service</h3>
+                        <p>On-site management and maintenance support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCATION SECTION -->
+        <section id="location" class="location section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Prime Locations</h2>
+                    <p>Nyena Court properties are strategically located in the most desirable neighborhoods across Ghana.</p>
+                </div>
+                
+                <div class="location-container">
+                    <div class="location-map">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>Nyena Court Locations</h3>
+                            <p>Interactive map showing all property locations</p>
+                        </div>
+                    </div>
+                    <div class="location-info">
+                        <h3>Strategic Neighborhoods</h3>
+                        <p>Our properties are located in prime areas with easy access to business districts, shopping centers, restaurants, and entertainment venues.</p>
+                        
+                        <div class="location-list">
+                            <div class="location-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Accra Central</h4>
+                                    <p>Heart of the city with proximity to business districts and cultural attractions.</p>
+                                </div>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>East Legon</h4>
+                                    <p>Upscale residential area with modern amenities and international schools.</p>
+                                </div>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Airport Residential</h4>
+                                    <p>Executive neighborhood close to the airport and diplomatic missions.</p>
+                                </div>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Cantoments</h4>
+                                    <p>Historic area with green spaces and proximity to government offices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="location-badges">
+                            <span class="tag tag-available">15 min to Airport</span>
+                            <span class="tag tag-featured">Near Shopping Malls</span>
+                            <span class="tag tag-furnished">Easy Transport</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INQUIRY SECTION -->
+        <section id="inquiry" class="inquiry section">
+            <div class="container">
+                <div class="inquiry-container">
+                    <div class="inquiry-info">
+                        <h2>Interested in Nyena Court?</h2>
+                        <p>Contact our real estate team for more information, property viewings, or to discuss your specific requirements. We're here to help you find your perfect home.</p>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p>+233 24 123 4567</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <p>properties@nyenacourt.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Business Hours</h4>
+                                    <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                                    <p>Sat: 9:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="inquiry-form">
+                        <h3 style="color: white; margin-bottom: 2rem;">Send Inquiry</h3>
+                        <form id="inquiryForm">
+                            <div class="form-group">
+                                <label class="form-label" style="color: white;">Full Name</label>
+                                <input type="text" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="color: white;">Email Address</label>
+                                <input type="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="color: white;">Phone Number</label>
+                                <input type="tel" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="color: white;">Property Interest</label>
+                                <select class="form-select" required>
+                                    <option value="">Select Property</option>
+                                    <option value="studio">Modern Studio Apartment</option>
+                                    <option value="2-bedroom">Luxury 2-Bedroom Apartment</option>
+                                    <option value="3-bedroom">Executive 3-Bedroom Penthouse</option>
+                                    <option value="1-bedroom">1-Bedroom Executive Suite</option>
+                                    <option value="other">Other Properties</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="color: white;">Message</label>
+                                <textarea class="form-textarea" placeholder="Tell us about your requirements, preferred move-in date, and any questions you may have..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Nyena Court Logo" class="footer-logo-img">
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-main">NYENA COURT</div>
+                            <div class="footer-logo-sub">PREMIUM APARTMENTS</div>
+                        </div>
+                    </div>
+                    <p>Premium apartment rentals in prime locations across Ghana. Experience modern living with luxury amenities, security, and convenience.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Properties</h5>
+                    <ul>
+                        <li><a href="#properties"><i class="fas fa-chevron-right"></i> Available Apartments</a></li>
+                        <li><a href="#properties"><i class="fas fa-chevron-right"></i> Studio Apartments</a></li>
+                        <li><a href="#properties"><i class="fas fa-chevron-right"></i> 1-Bedroom Apartments</a></li>
+                        <li><a href="#properties"><i class="fas fa-chevron-right"></i> 2-Bedroom Apartments</a></li>
+                        <li><a href="#properties"><i class="fas fa-chevron-right"></i> 3-Bedroom Apartments</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Locations</h5>
+                    <ul>
+                        <li><a href="#location"><i class="fas fa-chevron-right"></i> Accra Central</a></li>
+                        <li><a href="#location"><i class="fas fa-chevron-right"></i> East Legon</a></li>
+                        <li><a href="#location"><i class="fas fa-chevron-right"></i> Airport Residential</a></li>
+                        <li><a href="#location"><i class="fas fa-chevron-right"></i> Cantoments</a></li>
+                        <li><a href="#location"><i class="fas fa-chevron-right"></i> Coming Soon: Kumasi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="/about"><i class="fas fa-chevron-right"></i> About Nyena Court</a></li>
+                        <li><a href="/careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                        <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="/faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="/terms"><i class="fas fa-chevron-right"></i> Rental Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Nyena Court Properties Ltd. All Rights Reserved. | <a href="/privacy" style="color: var(--accent-yellow);">Privacy Policy</a> | <a href="/terms" style="color: var(--accent-yellow);">Terms of Service</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;"><i>Part of the Nyena Logistics Group</i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            navLinks.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking outside or on a link
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+
+        // Initialize scroll animation
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Modal functionality
+        function openModal(propertyId) {
+            const modal = document.getElementById('propertyModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('propertyModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', (e) => {
+            const modal = document.getElementById('propertyModal');
+            if (modal.classList.contains('active') && e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Save property to favorites
+        function saveProperty(propertyId) {
+            const favorites = JSON.parse(localStorage.getItem('nyenaFavorites')) || [];
+            
+            if (!favorites.includes(propertyId)) {
+                favorites.push(propertyId);
+                localStorage.setItem('nyenaFavorites', JSON.stringify(favorites));
+                
+                // Show success message
+                showNotification('Property added to favorites!', 'success');
+            } else {
+                // Remove from favorites
+                const index = favorites.indexOf(propertyId);
+                if (index > -1) {
+                    favorites.splice(index, 1);
+                    localStorage.setItem('nyenaFavorites', JSON.stringify(favorites));
+                    
+                    // Show removed message
+                    showNotification('Property removed from favorites', 'info');
+                }
+            }
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            // Add styles
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${type === 'success' ? 'var(--property-green)' : 'var(--property-blue)'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                z-index: 3000;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                animation: fadeInUp 0.3s ease;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'fadeOut 0.3s ease forwards';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Form submissions
+        document.getElementById('inquiryForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            showNotification('Inquiry sent successfully! We will contact you within 24 hours.', 'success');
+            this.reset();
+        });
+
+        // Filter functionality
+        document.querySelector('.property-filters .btn-primary')?.addEventListener('click', function() {
+            const location = document.querySelector('select').value;
+            const type = document.querySelectorAll('select')[1].value;
+            const price = document.querySelectorAll('select')[2].value;
+            
+            // In a real application, this would filter properties
+            showNotification(`Filtering properties: ${location || 'All locations'}, ${type || 'All types'}, ${price || 'Any price'}`, 'info');
+        });
+
+        // Initialize property cards with animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const propertyCards = document.querySelectorAll('.property-card');
+            propertyCards.forEach((card, index) => {
+                card.style.animation = `fadeInUp 0.8s ease ${index * 0.1}s both`;
+            });
+            
+            // Add animation to amenities
+            const amenityCards = document.querySelectorAll('.amenity-card');
+            amenityCards.forEach((card, index) => {
+                card.classList.add('animate-on-scroll');
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Initialize saved properties
+            const savedProperties = JSON.parse(localStorage.getItem('nyenaFavorites')) || [];
+            console.log('Saved properties:', savedProperties);
+        });
+
+        // Add hover effect to thumbnails
+        document.addEventListener('DOMContentLoaded', () => {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.querySelector('.main-image img');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Remove active class from all thumbnails
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked thumbnail
+                    this.classList.add('active');
+                    
+                    // Change main image (in real app, would use actual image switching)
+                    if (mainImage) {
+                        const imgSrc = this.querySelector('img')?.src;
+                        if (imgSrc) {
+                            mainImage.src = imgSrc;
+                        }
+                    }
+                });
+            });
+        });
+
+        // Availability calendar functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create a simple calendar
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+            
+            // In a real app, you would fetch actual availability data from a server
+            // This is just a demonstration
+            const bookedDays = [5, 6, 12, 13, 19, 20, 26, 27];
+            
+            // Generate calendar days
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            
+            // This would be populated with real data in production
+            console.log(`Calendar for ${currentMonth + 1}/${currentYear}: ${daysInMonth} days`);
+        });
+    </script>
+</body>
+</html>

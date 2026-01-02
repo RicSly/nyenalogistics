@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Learn about Nyena Logistics - Africa's leading integrated logistics platform. Our mission, vision, team, and commitment to transforming supply chains across the continent.">
-    <meta name="keywords" content="about Nyena Logistics, logistics company Africa, supply chain solutions, company history, leadership team, logistics mission">
-    <title>About Us | Nyena Logistics - Africa's Premier Integrated Logistics Platform</title>
+    <meta name="description" content="Learn about Nyena Group - Africa's leading integrated solutions provider in supply chain, hospitality, real estate, and transportation. Our mission, vision, and commitment to transforming business across the continent.">
+    <meta name="keywords" content="about Nyena Group, integrated solutions Africa, supply chain, hospitality, real estate, transportation, company history, leadership">
+    <title>About Us | Nyena Group - Africa's Premier Integrated Solutions Provider</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="icon.png">
@@ -641,71 +641,115 @@
             opacity: 0.8;
         }
 
-        /* ================= TEAM SECTION ================= */
-        .team-section {
+        /* ================= LEADERSHIP SECTION ================= */
+        .leadership-section {
             background: rgba(14, 116, 144, 0.05);
             position: relative;
             overflow: hidden;
         }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .team-member {
+        .ceo-profile {
+            max-width: 800px;
+            margin: 4rem auto 0;
             background: white;
             border-radius: var(--radius-lg);
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
+            overflow: hidden;
             box-shadow: var(--shadow-hover);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
         }
 
-        .member-photo {
-            width: 150px;
-            height: 150px;
+        .ceo-photo-container {
             background: var(--teal-gradient);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 3rem;
+            padding: 3rem;
+            position: relative;
+        }
+
+        .ceo-photo {
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 4rem;
             font-weight: 700;
             position: relative;
-            overflow: hidden;
+            border: 5px solid var(--gold);
+            animation: pulse 3s infinite;
         }
 
-        .member-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .ceo-info {
+            padding: 3rem;
         }
 
-        .member-info h3 {
-            font-size: 1.5rem;
+        .ceo-info h3 {
+            font-size: 2rem;
             margin-bottom: 0.5rem;
+            color: var(--navy);
         }
 
-        .member-role {
+        .ceo-role {
             color: var(--teal);
             font-weight: 600;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
-        .member-bio {
+        .ceo-bio {
             color: var(--slate);
-            opacity: 0.8;
-            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .ceo-quote {
+            background: rgba(14, 116, 144, 0.05);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--gold);
+            margin-top: 2rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        .ceo-quote i {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .ceo-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .ceo-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(14, 116, 144, 0.05);
+            border-radius: var(--radius-md);
+        }
+
+        .ceo-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--teal);
+            display: block;
+        }
+
+        .ceo-stat-label {
+            font-size: 0.9rem;
+            color: var(--slate);
+            margin-top: 0.5rem;
         }
 
         /* ================= MILESTONES ================= */
@@ -972,6 +1016,10 @@
                 left: 30px;
                 transform: translate(-50%, -50%);
             }
+            
+            .ceo-profile {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1025,8 +1073,7 @@
                 font-size: 2.3rem;
             }
             
-            .values-grid,
-            .team-grid {
+            .values-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1043,6 +1090,16 @@
             
             .newsletter-form {
                 flex-direction: column;
+            }
+            
+            .ceo-photo {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+            
+            .ceo-stats {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1106,6 +1163,20 @@
                 padding: 0.75rem 1.25rem;
                 font-size: 1rem;
             }
+            
+            .ceo-info {
+                padding: 2rem;
+            }
+            
+            .ceo-info h3 {
+                font-size: 1.7rem;
+            }
+            
+            .ceo-photo {
+                width: 120px;
+                height: 120px;
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -1119,10 +1190,10 @@
         <div class="container">
             <nav class="nav" aria-label="Main Navigation">
                 <a href="main.html" class="logo">
-                    <img src="nyenalogo.png" alt="Nyena Logistics Logo" class="logo-img">
+                    <img src="nyenalogo.png" alt="Nyena Logisitics Logo" class="logo-img">
                     <div class="logo-text">
-                        <div class="logo-main">NYENA</div>
-                        <div class="logo-sub">LOGISTICS</div>
+                        <div class="logo-main">NYENA LOGISTICS</div>
+                        <div class="logo-sub">INTEGRATED SOLUTIONS</div>
                     </div>
                 </a>
                 
@@ -1136,9 +1207,7 @@
                     <a href="main.html#services" class="nav-link">Services</a>
                     <a href="main.html#industries" class="nav-link">Industries</a>
                     <a href="main.html#contact" class="nav-link">Contact</a>
-                    <a href="/track" class="nav-link">Track Shipment</a>
                     <a href="/partners" class="nav-link">Partners</a>
-                    <a href="/dashboard" class="btn btn-dark">Dashboard</a>
                 </div>
             </nav>
         </div>
@@ -1154,7 +1223,7 @@
                         About <span>Nyena Logistics</span>
                     </h1>
                     <p>
-                        Discover the story behind Africa's premier integrated logistics platform. Learn about our mission, values, and the team dedicated to transforming supply chains across the continent.
+                        Discover the story behind Africa's premier integrated solutions provider. Learn about our mission, values, and commitment to transforming business operations across the continent through comprehensive solutions.
                     </p>
                     <a href="#story" class="btn btn-yellow btn-lg">
                         <i class="fas fa-book-open"></i> Our Story
@@ -1170,8 +1239,8 @@
                     <div class="story-image-container">
                         <div class="story-image">
                             <div class="story-image-content">
-                                <h3 style="color: white; margin-bottom: 0.5rem;">Nyena Operations Hub</h3>
-                                <p>Accra, Ghana Headquarters</p>
+                                <h3 style="color: white; margin-bottom: 0.5rem;">Nyena Logistics Headquarters</h3>
+                                <p>Accra, Ghana</p>
                             </div>
                         </div>
                         <div class="story-badge">
@@ -1181,18 +1250,18 @@
                     </div>
                     <div class="story-text">
                         <h2>Our <span>Journey</span> Begins</h2>
-                        <p>Founded in 2020 during a period of rapid digital transformation across Africa, Nyena Logistics was born from a simple yet powerful vision: to create a unified platform that solves the continent's complex logistics challenges.</p>
-                        <p>Our founders, experienced professionals in logistics, technology, and African markets, recognized the fragmentation in Africa's supply chain ecosystem. They saw an opportunity to leverage technology to connect businesses with reliable movement and infrastructure solutions.</p>
-                        <p>Starting with just three team members and a single warehouse in Accra, Ghana, we've grown to become a pan-African platform operating in 12 countries with over 500 verified partners and 15,000+ successful deliveries.</p>
+                        <p>Founded in 2020 during a period of rapid business transformation across Africa, Nyena Group was born from a visionary concept: to create an integrated platform that addresses Africa's diverse operational challenges through comprehensive solutions.</p>
+                        <p>Our founder recognized the need for unified business solutions that could seamlessly integrate supply chain, hospitality, real estate, and transportation services. The vision was clear - create a one-stop platform that simplifies business operations across the continent.</p>
+                        <p>Starting with a single service focus, we've strategically expanded to become a pan-African integrated solutions provider operating in 12 countries, serving over 15,000 active clients with a network of 500+ verified partners.</p>
                         
                         <div style="margin-top: 2rem;">
                             <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Our Mission</h3>
-                            <p>To simplify logistics across Africa by leveraging technology, local expertise, and strategic partnerships to overcome infrastructure challenges and drive economic growth.</p>
+                            <p>To simplify business operations across Africa by providing integrated solutions that leverage technology, local expertise, and strategic partnerships to overcome operational challenges and drive sustainable economic growth.</p>
                         </div>
                         
                         <div style="margin-top: 2rem;">
                             <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Our Vision</h3>
-                            <p>To become Africa's most trusted logistics infrastructure platform by 2030, connecting every business to efficient, reliable, and affordable movement solutions.</p>
+                            <p>To become Africa's most trusted integrated solutions platform by 2030, connecting businesses with efficient, reliable, and comprehensive operational support across all our service areas.</p>
                         </div>
                     </div>
                 </div>
@@ -1213,15 +1282,15 @@
                             <i class="fas fa-handshake"></i>
                         </div>
                         <h3>Integrity</h3>
-                        <p>We operate with transparency, honesty, and ethical practices in all our dealings. Our word is our bond, and we build trust through consistent, reliable actions.</p>
+                        <p>We operate with transparency, honesty, and ethical practices across all our services. Our commitment to integrity builds lasting trust with clients and partners.</p>
                     </div>
                     
                     <div class="value-card">
                         <div class="value-icon">
-                            <i class="fas fa-lightbulb"></i>
+                            <i class="fas fa-sync-alt"></i>
                         </div>
-                        <h3>Innovation</h3>
-                        <p>We continuously seek smarter solutions to complex logistics challenges, leveraging technology to improve efficiency and create value for our clients.</p>
+                        <h3>Integration</h3>
+                        <p>We believe in seamless integration across all service areas, providing comprehensive solutions that work together to maximize efficiency and value for our clients.</p>
                     </div>
                     
                     <div class="value-card">
@@ -1229,15 +1298,15 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3>Reliability</h3>
-                        <p>We deliver on our promises, ensuring that every shipment reaches its destination safely and on time, every time.</p>
+                        <p>We deliver consistent, dependable service across all our operations. Our clients can count on us for solutions that work, every time.</p>
                     </div>
                     
                     <div class="value-card">
                         <div class="value-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3>Customer-Centric</h3>
-                        <p>Our clients are at the heart of everything we do. We listen, adapt, and evolve to meet their unique needs and exceed their expectations.</p>
+                        <h3>Client-Centric</h3>
+                        <p>Our clients' success is our success. We listen, adapt, and tailor our solutions to meet unique business needs across diverse African markets.</p>
                     </div>
                     
                     <div class="value-card">
@@ -1245,70 +1314,68 @@
                             <i class="fas fa-globe-africa"></i>
                         </div>
                         <h3>Local Expertise</h3>
-                        <p>We combine global best practices with deep understanding of local markets, regulations, and cultural nuances across Africa.</p>
+                        <p>We combine global best practices with deep understanding of local markets, regulations, and cultural nuances across all African regions we serve.</p>
                     </div>
                     
                     <div class="value-card">
                         <div class="value-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>Sustainability</h3>
-                        <p>We're committed to sustainable logistics practices that minimize environmental impact while maximizing economic value for communities.</p>
+                        <h3>Sustainable Growth</h3>
+                        <p>We're committed to solutions that drive sustainable business growth while positively impacting the communities and environments where we operate.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- LEADERSHIP TEAM -->
-        <section class="team-section section">
+        <!-- LEADERSHIP -->
+        <section class="leadership-section section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Meet Our <span class="text-teal">Leadership</span></h2>
-                    <p>The visionary leaders driving Nyena Logistics forward</p>
+                    <h2>Our <span class="text-teal">Founder & CEO</span></h2>
+                    <p>The visionary leader behind Nyena Group's integrated solutions platform</p>
                 </div>
                 
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="member-info">
-                            <h3>Issah Yakubu</h3>
-                            <div class="member-role">CEO & Founder</div>
-                            <p class="member-bio">Former logistics executive with 15+ years experience across West Africa. Founded Nyena Logistics to solve fragmentation in African supply chains.</p>
+                <div class="ceo-profile">
+                    <div class="ceo-photo-container">
+                        <div class="ceo-photo">
+                            IY
                         </div>
                     </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <i class="fas fa-user-tie"></i>
+                    <div class="ceo-info">
+                        <h3>Issah Yakubu</h3>
+                        <span class="ceo-role">Founder & Chief Executive Officer</span>
+                        
+                        <p class="ceo-bio">
+                            With over 15 years of experience across African markets, Issah Yakubu envisioned and built Nyena Logistics from the ground up. His diverse background in business operations, technology, and African market dynamics provided the unique insight needed to create Africa's premier integrated solutions platform.
+                        </p>
+                        
+                        <p class="ceo-bio">
+                            Before founding Nyena Logistics, Issah held senior positions in multinational corporations across West Africa within the Maritime space, where he identified the critical need for integrated business solutions that could address the continent's unique operational challenges. His leadership has been instrumental in Nyena Group's expansion across African countries and the development of our four core service areas.
+                        </p>
+                        
+                        <div class="ceo-quote">
+                            <i class="fas fa-quote-left"></i>
+                            "Our vision at Nyena Logistics is to create seamless business ecosystems that empower African enterprises to thrive. By integrating supply chain, hospitality, real estate, and transportation solutions, we're not just solving problems - we're building the foundation for sustainable economic growth across the continent."
                         </div>
-                        <div class="member-info">
-                            <h3>Ama Serwaa</h3>
-                            <div class="member-role">Chief Operations Officer</div>
-                            <p class="member-bio">Operations specialist with expertise in optimizing complex supply chains across multiple African markets.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="member-info">
-                            <h3>Kofi Mensah</h3>
-                            <div class="member-role">Chief Technology Officer</div>
-                            <p class="member-bio">Tech visionary with background in building scalable platforms for emerging markets. Leads our digital transformation.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="member-info">
-                            <h3>Esi Ampofo</h3>
-                            <div class="member-role">Chief Financial Officer</div>
-                            <p class="member-bio">Finance professional with extensive experience in African markets and cross-border transactions.</p>
+                        
+                        <div class="ceo-stats">
+                            <div class="ceo-stat">
+                                <span class="ceo-stat-number">15+</span>
+                                <span class="ceo-stat-label">Years Experience</span>
+                            </div>
+                            <div class="ceo-stat">
+                                <span class="ceo-stat-number">12</span>
+                                <span class="ceo-stat-label">Countries Served</span>
+                            </div>
+                            <div class="ceo-stat">
+                                <span class="ceo-stat-number">4</span>
+                                <span class="ceo-stat-label">Service Areas</span>
+                            </div>
+                            <div class="ceo-stat">
+                                <span class="ceo-stat-number">15K+</span>
+                                <span class="ceo-stat-label">Active Clients</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1319,55 +1386,55 @@
         <section class="milestones-section section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Our <span class="text-teal">Milestones</span></h2>
-                    <p>Key moments in Nyena Logistics' journey of growth and impact</p>
+                    <h2>Our <span class="text-teal">Journey</span></h2>
+                    <p>Key milestones in Nyena Logistics' evolution as Africa's integrated solutions leader</p>
                 </div>
                 
                 <div class="milestones-timeline">
                     <div class="milestone">
                         <div class="milestone-content">
                             <h3>Company Founded</h3>
-                            <p>Nyena Logistics officially launches in Accra, Ghana with a focus on regional logistics solutions.</p>
+                            <p>Nyena Logistics officially launches in Accra, Ghana with a focus on integrated business solutions.</p>
                         </div>
                         <div class="milestone-year">2020</div>
                     </div>
                     
                     <div class="milestone">
                         <div class="milestone-content">
-                            <h3>Platform Launch</h3>
-                            <p>Our integrated digital platform goes live, connecting clients with logistics partners across Ghana.</p>
+                            <h3>Integrated Platform Launch</h3>
+                            <p>Our comprehensive digital platform goes live, connecting clients with integrated solutions across Ghana.</p>
                         </div>
                         <div class="milestone-year">2021</div>
                     </div>
                     
                     <div class="milestone">
                         <div class="milestone-content">
-                            <h3>West African Expansion</h3>
-                            <p>We expand operations to Nigeria, Côte d'Ivoire, and Senegal, establishing regional hubs.</p>
+                            <h3>Service Expansion</h3>
+                            <p>We expand our service portfolio to include all four core areas: supply chain, hospitality, real estate, and transportation.</p>
                         </div>
                         <div class="milestone-year">2022</div>
                     </div>
                     
                     <div class="milestone">
                         <div class="milestone-content">
-                            <h3>Integrated Services</h3>
-                            <p>Launch of real estate, shipping, and transport divisions to offer comprehensive solutions.</p>
+                            <h3>Pan-African Growth</h3>
+                            <p>Operations expand across West Africa with regional hubs in Nigeria, Côte d'Ivoire, and Senegal.</p>
                         </div>
                         <div class="milestone-year">2023</div>
                     </div>
                     
                     <div class="milestone">
                         <div class="milestone-content">
-                            <h3>Pan-African Reach</h3>
-                            <p>Operations expand to 12 African countries with 500+ verified partners in our network.</p>
+                            <h3>12 Country Network</h3>
+                            <p>We establish presence in 12 African countries with 500+ verified partners in our integrated network.</p>
                         </div>
                         <div class="milestone-year">2024</div>
                     </div>
                     
                     <div class="milestone">
                         <div class="milestone-content">
-                            <h3>15,000+ Deliveries</h3>
-                            <p>We celebrate a major milestone of 15,000+ successful deliveries across Africa.</p>
+                            <h3>15,000+ Active Clients</h3>
+                            <p>We celebrate serving over 15,000 active clients across Africa with integrated business solutions.</p>
                         </div>
                         <div class="milestone-year">2025</div>
                     </div>
@@ -1379,8 +1446,8 @@
         <section class="cta section" style="background: var(--navy-gradient);">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
-                    <h2 style="color: white;">Join Our Journey</h2>
-                    <p style="color: white; opacity: 0.9;">Be part of Africa's logistics transformation</p>
+                    <h2 style="color: white;">Partner With Us</h2>
+                    <p style="color: white; opacity: 0.9;">Join our journey of transforming business operations across Africa</p>
                 </div>
                 
                 <div style="text-align: center; margin-top: 3rem;">
@@ -1388,7 +1455,7 @@
                         <i class="fas fa-briefcase"></i> Careers at Nyena
                     </a>
                     <a href="/partners" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-handshake"></i> Partner With Us
+                        <i class="fas fa-handshake"></i> Become a Partner
                     </a>
                 </div>
             </div>
@@ -1401,13 +1468,13 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="logo.png" alt="Nyena Logistics Logo" class="footer-logo-img">
+                        <img src="logo.png" alt="Nyena Group Logo" class="footer-logo-img">
                         <div class="footer-logo-text">
-                            <div class="footer-logo-main">NYENA</div>
-                            <div class="footer-logo-sub">LOGISTICS</div>
+                            <div class="footer-logo-main">NYENA LOGISTICS</div>
+                            <div class="footer-logo-sub">INTEGRATED SOLUTIONS</div>
                         </div>
                     </div>
-                    <p>Africa's premier integrated logistics platform, connecting businesses with smarter movement and infrastructure solutions across the continent.</p>
+                    <p>Africa's premier integrated solutions provider, connecting businesses with comprehensive operational support across supply chain, hospitality, real estate, and transportation.</p>
                     
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook">
@@ -1429,7 +1496,7 @@
                     <h5>About Nyena</h5>
                     <ul>
                         <li><a href="/about"><i class="fas fa-chevron-right"></i> Our Story</a></li>
-                        <li><a href="/leadership"><i class="fas fa-chevron-right"></i> Leadership Team</a></li>
+                        <li><a href="/leadership"><i class="fas fa-chevron-right"></i> Leadership</a></li>
                         <li><a href="/careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
                         <li><a href="/news"><i class="fas fa-chevron-right"></i> News & Media</a></li>
                         <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
@@ -1439,27 +1506,27 @@
                 <div class="footer-links">
                     <h5>Services</h5>
                     <ul>
-                        <li><a href="/logistics"><i class="fas fa-chevron-right"></i> General Logistics</a></li>
-                        <li><a href="/real-estate"><i class="fas fa-chevron-right"></i> Real Estate & Apartments</a></li>
+                        <li><a href="/supply-chain"><i class="fas fa-chevron-right"></i> Supply Chain Solutions</a></li>
+                        <li><a href="/hospitality"><i class="fas fa-chevron-right"></i> Hospitality & Real Estate</a></li>
                         <li><a href="/shipping"><i class="fas fa-chevron-right"></i> Shipping & Freight</a></li>
-                        <li><a href="/transport"><i class="fas fa-chevron-right"></i> Transport & Fleet</a></li>
-                        <li><a href="/track"><i class="fas fa-chevron-right"></i> Track Shipment</a></li>
+                        <li><a href="/transport"><i class="fas fa-chevron-right"></i> Transportation Solutions</a></li>
+                        <li><a href="/consulting"><i class="fas fa-chevron-right"></i> Business Consulting</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h5>Resources</h5>
                     <ul>
-                        <li><a href="/blog"><i class="fas fa-chevron-right"></i> Blog & Insights</a></li>
+                        <li><a href="/blog"><i class="fas fa-chevron-right"></i> Insights & Blog</a></li>
                         <li><a href="/help"><i class="fas fa-chevron-right"></i> Help Center</a></li>
-                        <li><a href="/api"><i class="fas fa-chevron-right"></i> Developer API</a></li>
                         <li><a href="/partners"><i class="fas fa-chevron-right"></i> Partner Program</a></li>
                         <li><a href="/support"><i class="fas fa-chevron-right"></i> Customer Support</a></li>
+                        <li><a href="/locations"><i class="fas fa-chevron-right"></i> Our Locations</a></li>
                     </ul>
                     
                     <div class="newsletter">
                         <h6>Subscribe to Our Newsletter</h6>
-                        <p>Get the latest logistics insights and updates</p>
+                        <p>Get the latest business insights and updates</p>
                         <form class="newsletter-form">
                             <input type="email" class="newsletter-input" placeholder="Your email address" required>
                             <button type="submit" class="btn btn-yellow" style="padding: 0.75rem 1.5rem;"><i class="fa-solid fa-bell"></i> </button>
@@ -1573,12 +1640,12 @@
                 card.style.animationDelay = `${index * 0.1}s`;
             });
             
-            // Add animation to team members
-            const teamMembers = document.querySelectorAll('.team-member');
-            teamMembers.forEach((member, index) => {
-                member.classList.add('animate-on-scroll');
-                member.style.animationDelay = `${index * 0.1}s`;
-            });
+            // Add animation to CEO profile
+            const ceoProfile = document.querySelector('.ceo-profile');
+            if (ceoProfile) {
+                ceoProfile.classList.add('animate-on-scroll');
+                ceoProfile.style.animationDelay = '0.3s';
+            }
             
             // Add animation to milestones
             const milestones = document.querySelectorAll('.milestone');

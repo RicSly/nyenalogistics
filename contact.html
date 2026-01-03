@@ -1,1 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Contact Nyena Logistics - Africa's leading integrated solutions provider. Get in touch with our team for logistics, hospitality, real estate, and transportation services.">
+    <meta name="keywords" content="contact Nyena Logistics, logistics contact, Africa business solutions, supply chain support, Ghana logistics">
+    <title>Contact Us | Nyena Logistics</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzjsqXv_Zqp-HBpt6uxt_29y-E_ODsP9k&callback=initMap&loading=async" async defer></script>
+    
+    <style>
+        /* ================= ROOT VARIABLES (Your Logo Colors) ================= */
+        :root {
+            --navy: #0B2C3D;
+            --teal: #0E7490;
+            --gold: #D4AF37;
+            --off-white: #F8FAFC;
+            --slate: #0F172A;
+            
+            /* New green colors */
+            --deep-green: #065F46;
+            --light-green: #D1FAE5;
+            --medium-green: #10B981;
+            --green-gradient: linear-gradient(135deg, #065F46 0%, #10B981 100%);
+            
+            /* Creative blends */
+            --teal-light: #0EA5E9;
+            --teal-dark: #075985;
+            --gold-light: #FBBF24;
+            --gold-dark: #B45309;
+            --navy-light: #164E63;
+            --navy-gradient: linear-gradient(135deg, #0B2C3D 0%, #164E63 100%);
+            --teal-gradient: linear-gradient(135deg, #0E7490 0%, #0EA5E9 100%);
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #FBBF24 100%);
+            
+            /* Accent yellowish color */
+            --accent-yellow: #FFD700;
+            --accent-yellow-light: #FFF380;
+            --accent-yellow-gradient: linear-gradient(135deg, #FFD700 0%, #FFE55C 100%);
+            
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --shadow: 0 20px 40px rgba(11, 44, 61, 0.08);
+            --shadow-hover: 0 30px 60px rgba(11, 44, 61, 0.15);
+            --shadow-gold: 0 15px 35px rgba(212, 175, 55, 0.15);
+            --shadow-yellow: 0 15px 35px rgba(255, 215, 0, 0.25);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        /* ================= RESET & BASE ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--off-white);
+            color: var(--slate);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ================= ANIMATIONS ================= */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        /* ================= UTILITY CLASSES ================= */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .text-center { text-align: center; }
+        .text-teal { color: var(--teal); }
+        .text-gold { color: var(--gold); }
+        .text-navy { color: var(--navy); }
+        .text-white { color: white; }
+        .text-accent-yellow { color: var(--accent-yellow); }
+        .text-deep-green { color: var(--deep-green); }
+        .bg-gradient-navy { background: var(--navy-gradient); }
+        .bg-gradient-teal { background: var(--teal-gradient); }
+        .bg-gradient-gold { background: var(--gold-gradient); }
+        .bg-gradient-green { background: var(--green-gradient); }
+        .bg-off-white { background: var(--off-white); }
+        .bg-accent-yellow { background: var(--accent-yellow); }
+        .bg-light-green { background: var(--light-green); }
+        .bg-deep-green { background: var(--deep-green); }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= BUTTONS ================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.25rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--teal-gradient);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: var(--navy);
+            font-weight: 800;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-yellow {
+            background: var(--accent-yellow-gradient);
+            color: var(--navy);
+            font-weight: 800;
+            box-shadow: var(--shadow-yellow);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-green {
+            background: var(--green-gradient);
+            color: white;
+            font-weight: 800;
+            box-shadow: 0 15px 35px rgba(6, 95, 70, 0.2);
+        }
+
+        .btn-green:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(6, 95, 70, 0.3);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: var(--navy-light);
+            transform: translateY(-5px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--teal);
+            border-color: var(--teal);
+        }
+
+        .btn-outline:hover {
+            background: var(--teal);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .btn-lg {
+            padding: 1.25rem 3rem;
+            font-size: 1.15rem;
+        }
+
+        /* ================= NAVBAR ================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 10px 30px rgba(11, 44, 61, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .nav {
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--teal);
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--navy);
+            padding: 0.5rem 0;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--teal);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            color: var(--navy);
+            z-index: 1001;
+        }
+
+        /* ================= CONTACT HERO ================= */
+        .contact-hero {
+            padding: 12rem 0 8rem;
+            background: var(--navy-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.05"><path d="M0 0h1200v600H0z" fill="none"/><path d="M0 300l1200-300v600L0 300z" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        .contact-hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-hero h1 {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .contact-hero h1 span {
+            background: var(--accent-yellow-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+
+        /* ================= CONTACT CONTENT ================= */
+        .contact-content {
+            padding: 6rem 1.5rem;
+            background: var(--off-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            margin-bottom: 6rem;
+        }
+
+        /* ================= CONTACT INFO ================= */
+        .contact-info {
+            padding-right: 2rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .contact-info h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+        }
+
+        .contact-info p {
+            color: var(--slate);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-yellow);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-yellow-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+
+        .contact-item-content p {
+            color: var(--slate);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .contact-item-content a {
+            color: var(--teal);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item-content a:hover {
+            color: var(--teal-dark);
+            gap: 0.75rem;
+        }
+
+        .business-hours {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--navy-gradient);
+            color: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .business-hours h4 {
+            color: var(--accent-yellow);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hour-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* ================= CONTACT FORM ================= */
+        .contact-form-section {
+            background: white;
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 120px;
+            border: 2px solid rgba(14, 116, 144, 0.1);
+        }
+
+        .contact-form-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+
+        .contact-form-section > p {
+            color: var(--slate);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .form-label.required::after {
+            content: ' *';
+            color: #DC2626;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-sm);
+            border: 2px solid rgba(11, 44, 61, 0.1);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-actions {
+            margin-top: 1rem;
+        }
+
+        /* ================= GOOGLE MAPS ================= */
+        .map-section {
+            padding: 6rem 1.5rem;
+            background: var(--navy);
+            color: white;
+            position: relative;
+        }
+
+        .map-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.03"><path d="M0 0h1200v600H0z" fill="none"/><circle cx="600" cy="300" r="200" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-yellow-gradient);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 1.2rem;
+        }
+
+        .map-container {
+            position: relative;
+            z-index: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            height: 500px;
+            border: 3px solid var(--accent-yellow);
+        }
+
+        #google-map {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 44, 61, 0.95);
+            padding: 2rem;
+            color: white;
+            backdrop-filter: blur(10px);
+            border-top: 3px solid var(--accent-yellow);
+        }
+
+        .map-overlay-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .map-address h4 {
+            color: var(--accent-yellow);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .map-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* ================= FAQ SECTION (Updated Background) ================= */
+        .faq-section {
+            padding: 6rem 1.5rem;
+            background: linear-gradient(135deg, #0C4A34 0%, #1A7D5E 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.05"><path d="M0 0h1200v600H0z" fill="none"/><path d="M0 300Q600 0 1200 300L1200 600Q600 900 0 600Z" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-yellow);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-question {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question i {
+            color: var(--accent-yellow);
+            transition: transform 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 2rem 2rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.8;
+            display: none;
+            font-size: 1.1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        /* ================= DEPARTMENT CONTACTS ================= */
+        .departments-section {
+            padding: 6rem 1.5rem;
+            background: white;
+        }
+
+        .departments-section .section-header h2 {
+            color: var(--deep-green);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .departments-section .section-header p {
+            color: var(--deep-green);
+            opacity: 0.9;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        .departments-section .section-header h2::after {
+            background: var(--green-gradient);
+        }
+
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .department-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 2px solid transparent;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--deep-green);
+        }
+
+        .department-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--green-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .department-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--deep-green);
+        }
+
+        .department-card p {
+            color: var(--slate);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .department-contact {
+            font-weight: 600;
+            color: var(--deep-green);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: var(--slate);
+            color: #94A3B8;
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-yellow-gradient);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .footer-logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer-logo-sub {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-yellow);
+            letter-spacing: 1.5px;
+            margin-top: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-yellow);
+            color: var(--navy);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h5 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-yellow);
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-yellow);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: var(--accent-yellow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 1100px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .contact-form-section {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .contact-hero {
+                padding: 10rem 0 6rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                box-shadow: -10px 0 40px rgba(11, 44, 61, 0.1);
+                transition: right 0.5s ease;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+                padding: 1rem 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(14, 116, 144, 0.1);
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+            
+            .contact-info {
+                padding-right: 0;
+            }
+            
+            .contact-form-section {
+                padding: 2.5rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .map-overlay-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .map-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .departments-section .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .contact-hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-form-section {
+                padding: 2rem;
+            }
+            
+            .contact-form-section h3 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .departments-section .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .contact-icon {
+                margin-bottom: 1rem;
+            }
+            
+            .faq-question {
+                padding: 1.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 1.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav class="nav" aria-label="Main Navigation">
+                <a href="main.html" class="logo">
+                    <img src="nyenalogo.png" alt="Nyena Logistics Logo" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-main">NYENA LOGISTICS</div>
+                        <div class="logo-sub">INTEGRATED SOLUTIONS</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="main.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="industries.html" class="nav-link">Industries</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="partners.html" class="nav-link">Partners</a>
+                    <a href="dashboard.html" class="btn btn-dark">Client Portal</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- CONTACT HERO -->
+        <section class="contact-hero" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1 id="contact-title">
+                        Get in <span>Touch</span>
+                    </h1>
+                    <p>
+                        Ready to transform your business operations across Africa? Contact Nyena Logistics today for integrated solutions in logistics, hospitality, real estate, and transportation.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact-form" class="btn btn-yellow btn-lg"><i class="fas fa-paper-plane"></i> Send Message</a>
+                        <a href="tel:+233241234567" class="btn btn-secondary btn-lg"><i class="fas fa-phone"></i> Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT CONTENT -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Connect with Our Team</h2>
+                        <p>At Nyena Logistics, we believe in building lasting partnerships. Our dedicated team is ready to assist you with customized solutions for your business needs across Africa.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-item-content">
+                                    <h4>Our Headquarters</h4>
+                                    <p>GL-108-0038, Tse addo, La Dade Kotopon,<br>Burma Camp, Accra, Ghana</p>
+                                    <a href="#map" class="map-link">
+                                        <i class="fas fa-map"></i> View on Google Maps
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-item-content">
+                                    <h4>Call Us</h4>
+                                    <p>General Inquiries & Support</p>
+                                    <a href="tel:+233241234567">+233 24 123 4567</a><br>
+                                    <a href="tel:+233271234567">+233 27 123 4567</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-item-content">
+                                    <h4>Email Us</h4>
+                                    <p>General Inquiries</p>
+                                    <a href="mailto:info@nyenalogistics.com">info@nyenalogistics.com</a>
+                                    <p>Support Team</p>
+                                    <a href="mailto:support@nyenalogistics.com">support@nyenalogistics.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="contact-item-content">
+                                    <h4>Visit Our Website</h4>
+                                    <p>Explore our services and solutions</p>
+                                    <a href="http://www.nyenalogistics.com" target="_blank">www.nyenalogistics.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="business-hours">
+                            <h4><i class="fas fa-clock"></i> Business Hours</h4>
+                            <div class="hours-list">
+                                <div class="hour-item">
+                                    <span>Monday - Friday</span>
+                                    <span>8:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Saturday</span>
+                                    <span>9:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Sunday</span>
+                                    <span>Emergency Services Only</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>24/7 Support</span>
+                                    <span>Available for Urgent Matters</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-section" id="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label required" for="first-name">First Name</label>
+                                    <input type="text" id="first-name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label required" for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label required" for="email">Email Address</label>
+                                <input type="email" id="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label required" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label required" for="company">Company/Organization</label>
+                                <input type="text" id="company" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label required" for="service">Service Interest</label>
+                                <select id="service" class="form-select" required>
+                                    <option value="">Select a Service</option>
+                                    <option value="logistics">General Logistics Solutions</option>
+                                    <option value="hospitality">Hospitality & Real Estate</option>
+                                    <option value="shipping">Shipping & Freight</option>
+                                    <option value="transport">Transportation Solutions</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label required" for="message">Your Message</label>
+                                <textarea id="message" class="form-textarea" placeholder="Tell us about your project or requirements..." required></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GOOGLE MAPS SECTION -->
+        <section id="map" class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Find Us Here</h2>
+                    <p>Visit our headquarters in Accra or explore our regional offices across Africa</p>
+                </div>
+                
+                <div class="map-container">
+                    <div id="google-map"></div>
+                    <div class="map-overlay">
+                        <div class="map-overlay-content">
+                            <div class="map-address">
+                                <h4>Nyena Logistics Headquarters</h4>
+                                <p>GL-108-0038, Tse addo, La Dade Kotopon,<br>Burma Camp, Accra, Ghana</p>
+                            </div>
+                            <div class="map-actions">
+                                <a href="https://www.google.com/maps/dir//5.5996823083441125,-0.13931734847978802" target="_blank" class="btn btn-yellow">
+                                    <i class="fas fa-directions"></i> Get Directions
+                                </a>
+                                <a href="tel:+233241234567" class="btn btn-secondary">
+                                    <i class="fas fa-phone"></i> Call from Map
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPARTMENT CONTACTS -->
+        <section class="departments-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact by Department</h2>
+                    <p class="text-deep-green">Get in touch with our specialized teams for specific inquiries</p>
+                </div>
+                
+                <div class="departments-grid">
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h4>Logistics Division</h4>
+                        <p>Supply chain, warehousing, and distribution solutions</p>
+                        <div class="department-contact">
+                            <span>Email: logistics@nyenalogistics.com</span>
+                            <span>Phone: +233 24 123 4001</span>
+                        </div>
+                    </div>
+                    
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h4>Hospitality & Real Estate</h4>
+                        <p>Property management and accommodation services</p>
+                        <div class="department-contact">
+                            <span>Email: hospitality@nyenalogistics.com</span>
+                            <span>Phone: +233 24 123 4002</span>
+                        </div>
+                    </div>
+                    
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <h4>Shipping & Freight</h4>
+                        <p>International shipping and customs clearance</p>
+                        <div class="department-contact">
+                            <span>Email: shipping@nyenalogistics.com</span>
+                            <span>Phone: +233 24 123 4003</span>
+                        </div>
+                    </div>
+                    
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Customer Support</h4>
+                        <p>24/7 assistance and general inquiries</p>
+                        <div class="department-contact">
+                            <span>Email: support@nyenalogistics.com</span>
+                            <span>Phone: +233 24 123 4567</span>
+                        </div>
+                    </div>
+                    
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Partnerships</h4>
+                        <p>Business partnerships and collaborations</p>
+                        <div class="department-contact">
+                            <span>Email: partners@nyenalogistics.com</span>
+                            <span>Phone: +233 24 123 4005</span>
+                        </div>
+                    </div>
+                    
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Careers</h4>
+                        <p>Job opportunities and recruitment</p>
+                        <div class="department-contact">
+                            <span>Email: careers@nyenalogistics.com</span>
+                            <span>Phone: +233 24 123 4006</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION (Updated Design) -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find quick answers to common questions about contacting Nyena Logistics</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are your business hours?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our standard business hours are Monday to Friday, 8:00 AM to 6:00 PM GMT. Saturday hours are 9:00 AM to 4:00 PM. For urgent matters, we provide 24/7 emergency support through our dedicated hotline: +233 24 123 4567.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How quickly will I receive a response to my inquiry?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We aim to respond to all inquiries within 24 hours during business days. Urgent matters are prioritized and typically receive a response within 2-4 hours. For emergency situations, please call our 24/7 support line.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you have offices in other African countries?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, Nyena Logistics operates in 12+ African countries including Ghana (headquarters), Nigeria, Kenya, South Africa, Ivory Coast, Senegal, Tanzania, Uganda, Rwanda, Ethiopia, Zambia, and Mozambique. Contact our headquarters for specific regional office information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What information should I include in my inquiry?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For the most efficient response, please include: your full name and company, contact information, service interest (logistics, hospitality, shipping, etc.), project scope or requirements, timeline, and any specific challenges you're facing. The more details you provide, the better we can assist you.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I schedule an in-person meeting at your office?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We welcome in-person meetings at our headquarters in Accra. Please contact us via phone or email to schedule an appointment. For international clients, we also offer virtual meetings via Zoom, Microsoft Teams, or Google Meet.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer emergency logistics services?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide 24/7 emergency logistics support for time-sensitive shipments, urgent transportation needs, and critical supply chain situations. Contact our emergency hotline: +233 27 123 4567 for immediate assistance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Nyena Logistics Logo" class="footer-logo-img">
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-main">NYENA LOGISTICS</div>
+                            <div class="footer-logo-sub">INTEGRATED SOLUTIONS</div>
+                        </div>
+                    </div>
+                    <p>Africa's premier integrated solutions provider, connecting businesses with smarter infrastructure and operational excellence across the continent.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="main.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Our Services</a></li>
+                        <li><a href="industries.html"><i class="fas fa-chevron-right"></i> Industries</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="logistics.html"><i class="fas fa-chevron-right"></i> Logistics Solutions</a></li>
+                        <li><a href="real-estate.html"><i class="fas fa-chevron-right"></i> Hospitality & Real Estate</a></li>
+                        <li><a href="shipping.html"><i class="fas fa-chevron-right"></i> Shipping & Freight</a></li>
+                        <li><a href="transport.html"><i class="fas fa-chevron-right"></i> Transportation</a></li>
+                        <li><a href="consulting.html"><i class="fas fa-chevron-right"></i> Business Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> GL-108-0038, Tse addo, La Dade Kotopon, Burma Camp, Accra</li>
+                        <li><i class="fas fa-phone"></i> +233 24 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@nyenalogistics.com</li>
+                        <li><i class="fas fa-globe"></i> www.nyenalogistics.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Nyena Logistics Ltd. All Rights Reserved. | <a href="/privacy" style="color: var(--accent-yellow);">Privacy Policy</a> | <a href="/terms" style="color: var(--accent-yellow);">Terms of Service</a> | <a href="/cookies" style="color: var(--accent-yellow);">Cookie Policy</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;"><i>Headquarters: Greater Accra, Ghana | Regional Offices: Kumasi, Takoradi</i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            navLinks.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking outside or on a link
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const formObject = Object.fromEntries(formData);
+                
+                // In a real application, you would send this data to a server
+                console.log('Form submitted:', formObject);
+                
+                // Show success message
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalHTML = submitButton.innerHTML;
+                
+                submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitButton.disabled = true;
+                submitButton.style.background = 'var(--accent-yellow-gradient)';
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    this.reset();
+                    submitButton.innerHTML = originalHTML;
+                    submitButton.disabled = false;
+                    submitButton.style.background = '';
+                    
+                    // Show thank you message
+                    alert('Thank you for contacting Nyena Logistics! Our team will get back to you within 24 hours.');
+                }, 3000);
+            });
+        }
+
+        // Initialize Google Maps
+        function initMap() {
+            // Coordinates: 5.5996823083441125, -0.13931734847978802
+            const nyenaLocation = { lat: 5.5996823083441125, lng: -0.13931734847978802 };
+            
+            const map = new google.maps.Map(document.getElementById('google-map'), {
+                zoom: 17,
+                center: nyenaLocation,
+                mapTypeId: 'hybrid',
+                styles: [
+                    {
+                        "featureType": "all",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#0B2C3D"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "gamma": 0.01
+                            },
+                            {
+                                "lightness": 20
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "saturation": -31
+                            },
+                            {
+                                "lightness": -33
+                            },
+                            {
+                                "weight": 2
+                            },
+                            {
+                                "gamma": 0.8
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "lightness": 30
+                            },
+                            {
+                                "saturation": 30
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "saturation": 20
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "lightness": 20
+                            },
+                            {
+                                "saturation": -20
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "lightness": 10
+                            },
+                            {
+                                "saturation": -30
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "saturation": 25
+                            },
+                            {
+                                "lightness": 25
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "lightness": -20
+                            }
+                        ]
+                    }
+                ]
+            });
+            
+            // Custom marker icon
+            const markerIcon = {
+                url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+                        <circle cx="32" cy="32" r="24" fill="#FFD700" stroke="#0B2C3D" stroke-width="3"/>
+                        <circle cx="32" cy="32" r="16" fill="#0EA5E9" stroke="#FFFFFF" stroke-width="2"/>
+                        <path d="M32 20L36 30L46 32L36 34L32 44L28 34L18 32L28 30Z" fill="#FFFFFF"/>
+                        <text x="32" y="32" text-anchor="middle" dy=".3em" font-family="Arial" font-size="12" font-weight="bold" fill="#0B2C3D">N</text>
+                    </svg>
+                `),
+                scaledSize: new google.maps.Size(50, 50),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(25, 50)
+            };
+            
+            const marker = new google.maps.Marker({
+                position: nyenaLocation,
+                map: map,
+                title: 'Nyena Logistics Headquarters',
+                icon: markerIcon,
+                animation: google.maps.Animation.DROP
+            });
+            
+            // Info window content
+            const infoWindowContent = `
+                <div style="padding: 15px; max-width: 250px;">
+                    <h3 style="color: #0B2C3D; margin-bottom: 10px; font-size: 16px;">Nyena Logistics Headquarters</h3>
+                    <p style="color: #0E7490; margin-bottom: 8px; font-size: 14px;">
+                        <i class="fas fa-map-marker-alt" style="color: #FFD700;"></i> 
+                        GL-108-0038, Tse addo, La Dade Kotopon,<br>Burma Camp, Accra, Ghana
+                    </p>
+                    <p style="color: #0E7490; margin-bottom: 8px; font-size: 14px;">
+                        <i class="fas fa-phone" style="color: #FFD700;"></i> +233 24 123 4567
+                    </p>
+                    <a href="https://www.google.com/maps/dir//5.5996823083441125,-0.13931734847978802" 
+                       target="_blank" 
+                       style="display: inline-block; background: #FFD700; color: #0B2C3D; padding: 8px 12px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 13px; margin-top: 10px;">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+            `;
+            
+            const infoWindow = new google.maps.InfoWindow({
+                content: infoWindowContent,
+                maxWidth: 300
+            });
+            
+            // Open info window on marker click
+            marker.addListener('click', () => {
+                infoWindow.open(map, marker);
+            });
+            
+            // Open info window automatically
+            setTimeout(() => {
+                infoWindow.open(map, marker);
+            }, 1500);
+            
+            // Add click listener to map to close info window
+            map.addListener('click', () => {
+                infoWindow.close();
+            });
+        }
+
+        // Handle Google Maps API loading error
+        window.gm_authFailure = function() {
+            const mapContainer = document.getElementById('google-map');
+            mapContainer.innerHTML = `
+                <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(45deg, #0B2C3D, #164E63); color: white; padding: 2rem; text-align: center;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 4rem; color: #FFD700; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #FFD700; margin-bottom: 1rem;">Nyena Logistics Headquarters</h3>
+                    <p style="margin-bottom: 0.5rem;">GL-108-0038, Tse addo, La Dade Kotopon</p>
+                    <p style="margin-bottom: 1.5rem;">Burma Camp, Accra, Ghana</p>
+                    <a href="https://www.google.com/maps/place/5.5996823083441125,-0.13931734847978802" 
+                       target="_blank" 
+                       style="display: inline-block; background: #FFD700; color: #0B2C3D; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem;">
+                        <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                    </a>
+                </div>
+            `;
+        };
+
+        // Scroll animation
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+
+        // Initialize scroll animation
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Add animation classes to elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation to contact items
+            const contactItems = document.querySelectorAll('.contact-item');
+            contactItems.forEach((item, index) => {
+                item.classList.add('animate-on-scroll');
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation to department cards
+            const departmentCards = document.querySelectorAll('.department-card');
+            departmentCards.forEach((card, index) => {
+                card.classList.add('animate-on-scroll');
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation to FAQ items
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach((item, index) => {
+                item.classList.add('animate-on-scroll');
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
